@@ -14,7 +14,7 @@ const NavBar = () => {
             About Us
           </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item nav-item-u">
           <a class="nav-link" href="#">
             MedArc
           </a>
