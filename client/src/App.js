@@ -1,11 +1,13 @@
 import "./App.css";
 import "./theme/css/PluginBundle.css"
 import "./theme/css/StyleBundle.css"
+import Home  from "./components/Home/Home";
 
 function App() {
   return (
-    <h1 className="heading">MedArc</h1>
-
+    <div className="app-container">
+      <Home/>
+    </div>
   );
 }
 
