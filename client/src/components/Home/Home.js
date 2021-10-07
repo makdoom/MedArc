@@ -1,14 +1,21 @@
-import React from 'react';
-import NavBar from '../NavBar/NavBar';
-import './Home.css';
-
+import React from "react";
+import Hero from "../Hero/Hero";
+import NavBar from "../NavBar/NavBar";
+import "./home.css";
 
 const Home = () => {
-    return (
-        <div>
-            <NavBar />
+  return (
+      <div className="home-container">
+        <div className="navbar-container">
+          <NavBar />
         </div>
-    )
-}
+        <div className="container">
+          <div className="hero-container">
+            <Hero />
+          </div>
+        </div>
+    </div>
+  );
+};
 
-export default Home
+export default Home;

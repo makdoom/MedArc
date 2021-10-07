@@ -29,7 +29,10 @@
   --light: #F3F6F9;
   --dark: #181C32;
   --white: #ffffff;
-  --primary-background: #FFFAF5;
+  --primary-background: #FEF8F0;
+  --primary-color: #1CA944;
+  --primary-light-color: #8fffbb;
+  --secondary-color: #0A0A0A;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -59,10 +62,11 @@ body {
   font-family:  'Inter', sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.5;
-  color: #3F4254;
+  line-height: 1.6;
+  color: #0A0A0A;
   text-align: left;
-  background-color: var(--primary-background);}
+  background-color: var(--primary-background) !important;
+}
 
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important; }
@@ -46060,9 +46064,10 @@ code {
   .checkbox.checkbox-outline-2x > span {
     border-width: 2px !important; }
   .checkbox.checkbox-accent > span {
-    border-width: !important;
-    border-style: solid !important;
-    background-color: transparent !important; }
+    /* border-width: !important;
+    border-style: solid !important; */
+    /* background-color: transparent !important; */
+   }
     .checkbox.checkbox-accent > span:after {
       display: block; }
 
@@ -53810,13 +53815,14 @@ code {
   fill: #3F4254 !important; }
 
 .svg.svg-fill-light-dark-75 {
-  fill: !important; }
+  fill:#3F4254 !important;
+ }
 
 .svg.svg-fill-dark-65 {
   fill: #5E6278 !important; }
 
 .svg.svg-fill-light-dark-65 {
-  fill: !important; }
+  fill: #5E6278 !important; }
 
 .svg.svg-fill-dark-50 {
   fill: #7E8299 !important; }
@@ -59782,7 +59788,7 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  color: #3F4254; }
+   }
 
 router-outlet {
   display: none; }
@@ -59819,9 +59825,6 @@ canvas {
     .print-content-only .subheader,
     .print-content-only .offcanvas {
       display: none !important; } }
-
-body {
-  background: #ffffff; }
 
 @media (min-width: 992px) {
   .wrapper {

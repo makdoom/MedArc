@@ -1,0 +1,51 @@
+.hero {
+    /* border: 1px solid #000; */
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    line-height: 1.5;
+}
+
+.hero-left, .hero-right {
+    flex: 1;
+}
+.tagline h2 {
+  font-size: 4rem;
+  font-weight: 800;
+}
+.sub-tagline {
+    margin: 1.5rem 0;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+.get-cta-btn {
+    margin-top: 3.5rem;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    background: var(--primary-color);
+    padding: 12px 30px;
+    color: white;
+    border-radius: 30px !important;
+    display: flex;
+    align-items: center;
+}
+.get-cta-btn span {
+    font-size: 1.3rem;
+}
+.get-cta-btn i {
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    transition: all .3s ease-in;
+}
+.get-cta-btn:hover {
+    color: #fff;
+}
+.get-cta-btn:hover i {
+    transform: translateX(10px);
+
+}
+/* .get-cta-btn:hover span{
+    color: white;
+} */

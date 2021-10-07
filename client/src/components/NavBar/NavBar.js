@@ -1,36 +1,37 @@
 import React from "react";
+import "./navBar.css";
+
+import arc from '../../assets/images/arc.svg';
 
 const NavBar = () => {
+  
+  const navSlide = () => {
+    const burger = document.querySelector(".burger");
+    const nav = document.querySelector(".nav-links");
+
+    nav.classList.toggle("nav-active")
+    burger.classList.toggle("active")
+  }
   return (
     <div className="container">
-      <ul class="nav justify-content-around">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">
-            Home
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            About Us
-          </a>
-        </li>
-        <li class="nav-item nav-item-u">
-          <a class="nav-link" href="#">
-            MedArc
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            Service
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            Contact Us
-          </a>
-        </li>
+    <nav>
+      <div className="logo">
+        <img className="logo-img" src={arc} alt="" />
+        <h4 className="logo-text">MedArc</h4>
+      </div>
+      <ul className="nav-links">
+        <li className="nav-item"><a href="#" className="nav-link">Home</a></li>
+        <li className="nav-item"><a href="#" className="nav-link">About Us</a></li>
+        <li className="nav-item"><a href="#" className="nav-link">Service</a></li>
+        <li className="nav-item"><a href="#" className="nav-link">Contact Us</a></li>
       </ul>
+      <div className="burger" onClick={navSlide} >
+        <div className="line1"></div>
+        <div className="line2"></div>
+        <div className="line3"></div>
+      </div>
+    </nav>
+
     </div>
   );
 };
