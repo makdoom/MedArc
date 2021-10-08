@@ -30,9 +30,10 @@
   --dark: #181C32;
   --white: #ffffff;
   --primary-background: #FEF8F0;
+  --secondary-text-color: #0A0A0A;
   --primary-color: #1CA944;
+  --secondary-color: #FF931F;
   --primary-light-color: #8fffbb;
-  --secondary-color: #0A0A0A;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;

@@ -1,8 +1,8 @@
 import React from "react";
 import "./hero.css";
 
-import arc from '../../assets/images/arc.svg'
-import arcShadow from '../../assets/images/arcShadow.svg'
+import arc from "../../assets/images/arc.svg";
+import arcShadow from "../../assets/images/arcShadow.svg";
 
 const Hero = () => {
   return (
@@ -22,15 +22,18 @@ const Hero = () => {
             </p>
           </div>
           <div className="cta-btn">
-            <button type="button" className="get-cta-btn"> <span>Get Started</span> <i class="bi bi-arrow-right"></i></button>
+            <button type="button" className="get-cta-btn">
+              <span className="name">Get Started</span>
+              <i className="bi bi-arrow-right"></i>
+            </button>
           </div>
         </div>
       </div>
       <div className="hero-right text-center">
-          <div className="hero-img">
-            <img src={arc} alt="" />
-            <img src={arcShadow} alt="" />
-          </div>
+        <div className="hero-img">
+          <img src={arc} alt="arc" className="arc" />
+          <img src={arcShadow} alt="arcShadow" className="arc-shadow" />
+        </div>
       </div>
     </div>
   );

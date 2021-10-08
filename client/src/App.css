@@ -1,4 +1,19 @@
 .app-container {
   width: 100%;
   min-height: 100vh;
+  position: relative;
+}
+
+.bg-orange-shadow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.bg-green-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
