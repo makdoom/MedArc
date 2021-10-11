@@ -1,19 +1,19 @@
-.scroll-more-container{
-    border: 1px solid #000;
-    text-align: center;
+.scroll-more-container {
+  border: 1px solid #000;
+  text-align: center;
 }
 .scroll-more-container .circle {
-    position: relative;
-    width: 80px;
-    height: 80px;
-    background: grey;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background: grey;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.scroll-more-container .circle .circle-text{
-    position: absolute;
-    width: 100%;
-    height: 100%;
+.scroll-more-container .circle .circle-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
