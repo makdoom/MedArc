@@ -14,9 +14,9 @@ function App() {
       {/* <div className="bg-green-shadow">
         <img src={greenShadow} alt="arcShadow" className="arc-shadow" />
       </div> */}
-      <div className="bg-orange-shadow">
+      {/* <div className="bg-orange-shadow">
         <img src={orangeShadow} alt="arcShadow" className="arc-shadow" />
-      </div>
+      </div> */}
 
       <section className="home" id="home">
         <Home />

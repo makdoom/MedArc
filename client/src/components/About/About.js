@@ -1,7 +1,9 @@
 import React from "react";
 import "./about.css";
-import about from "../../assets/images/about.svg";
-import doc from "../../assets/images/doctor.gif";
+import about from "../../assets/images/about.png";
+// import about from "../../assets/images/abt.png";
+// import doc from "../../assets/images/doctor.gif";
+import doc from "../../assets/images/dp.gif";
 
 const About = () => {
   return (
@@ -46,7 +48,7 @@ const About = () => {
               <div className="col-md-6">
                 <div className="about-side-img">
                   <img src={about} alt="about-img" />
-                  {/* <img className="doc-gif" src={doc} alt="about-img" /> */}
+                  {/* <img src={doc} alt="about-img" /> */}
                 </div>
               </div>
             </div>

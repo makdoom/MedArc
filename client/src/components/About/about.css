@@ -62,11 +62,11 @@
 }
 .about-content .about-text {
   font-size: 1.4rem;
-  color: var(--secondary-text-color);
+  color: var(--gray-dark);
   text-align: justify;
 }
 .about-text span {
-  color: var(--primary-color);
+  color: var(--secondary-color);
   font-weight: 600;
 }
 

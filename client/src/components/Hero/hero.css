@@ -24,7 +24,7 @@
   border: none;
   outline: none;
   font-weight: 500;
-  background: var(--primary-color);
+  background: var(--secondary-color);
   padding: 12px 30px;
   color: white;
   border-radius: 8px !important;

@@ -30,9 +30,10 @@
   --dark: #181C32;
   --white: #ffffff;
   --primary-background: #FEF8F0;
-  --secondary-text-color: #1b1b1b;
+  --secondary-text-color: #21232c;
   --primary-color: #1CA944;
-  --secondary-color: #FF931F;
+  /* --secondary-color: #FF931F; */
+  --secondary-color: #E36414;
   --primary-light-color: #8fffbb;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
@@ -66,7 +67,7 @@ body {
   line-height: 1.6;
   color: #0A0A0A;
   text-align: left;
-  /* background-color: var(--primary-background) !important; */
+  background-color: var(--primary-background) !important;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
