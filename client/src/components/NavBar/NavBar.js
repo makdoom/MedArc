@@ -8,6 +8,7 @@ const NavBar = () => {
     const burger = document.querySelector(".burger");
     const navLinks = document.querySelector(".nav-links");
     navLinks.classList.toggle("active");
+    burger.classList.toggle("active");
   };
   return (
     <div className="container-fluid">
@@ -15,7 +16,7 @@ const NavBar = () => {
         <div className="logo">
           <h3>MedArc</h3>
         </div>
-        <ul className="nav-links active">
+        <ul className="nav-links">
           <li className="nav-link">
             <a href="#">HOME</a>
           </li>
@@ -25,6 +26,7 @@ const NavBar = () => {
           <li className="nav-link">
             <a href="#">WHAT WE DO</a>
           </li>
+
           <li className="nav-link">
             <a href="#">CONTACT US</a>
           </li>

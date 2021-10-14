@@ -36,7 +36,7 @@
   border-left: 2px solid #d3d3d3;
   border-right: 2px solid #d3d3d3;
 }
-.about-section::after {
+/* .about-section::after {
   position: absolute;
   content: "";
   bottom: 0%;
@@ -47,7 +47,7 @@
   border-bottom: 2px solid #d3d3d3;
   border-left: 2px solid #d3d3d3;
   border-right: 2px solid #d3d3d3;
-}
+} */
 .about-section {
   display: flex;
   justify-content: space-evenly;
@@ -57,7 +57,7 @@
   /* border: 1px solid #000; */
 }
 .content-section {
-  /* margin: 7rem 0 6rem 0; */
+  margin: 4rem 0;
   padding: 10px;
 }
 .about-content .about-text {

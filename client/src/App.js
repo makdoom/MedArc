@@ -6,6 +6,7 @@ import Home from "./components/Home/Home";
 import greenShadow from "./assets/images/greenShadow.svg";
 import orangeShadow from "./assets/images/orangeShadow.svg";
 import About from "./components/About/About";
+import Service from "./components/service/Service";
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
       </section>
       <section className="about" id="about">
         <About />
+      </section>
+      <section className="Service" id="service">
+        <Service />
       </section>
     </div>
   );

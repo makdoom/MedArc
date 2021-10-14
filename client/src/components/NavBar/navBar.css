@@ -82,8 +82,7 @@ nav {
   min-height: 8vh;
   /* padding: 1.5rem 0; */
   position: relative;
-  border: 1px solid #000;
-  padding: 1.5rem 4rem;
+  padding: 2rem 9rem;
 }
 nav .logo h3 {
   letter-spacing: 1.5px;
@@ -96,7 +95,7 @@ nav .nav-links {
   top: 0vh;
   right: -100%;
   height: 100vh;
-  background: white;
+  background: var(--primary-background);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -124,24 +123,41 @@ nav .nav-links {
   cursor: pointer;
   position: relative;
   z-index: 11;
+  transition: all 0.3s ease-in-out;
 }
 .burger div {
   width: 35px;
-  height: 4px;
-  border-radius: 10px;
+  height: 3px;
+  border-radius: 50px;
   margin-bottom: 0.4rem;
-  background: #000;
+  background: #131212;
   cursor: pointer;
   transition: 0.15s ease-in;
 }
-.burger .line1,
-.burger .line3 {
-  width: 20px;
+.burger .line1 {
+  width: 15px;
 }
-.burger:hover .line1,
-.burger:hover .line3 {
-  width: 35px;
+.burger .line2 {
+  width: 25px;
 }
-/* .burger:hover .line2 {
-  width: 20px;
-} */
+.burger.active {
+  transform: rotate(180deg);
+}
+
+.burger.active .line2 {
+  width: 33px;
+}
+.burger.active .line1 {
+  position: relative;
+  top: 3px;
+  right: 3px;
+  width: 18px;
+  transform: rotate(135deg);
+}
+.burger.active .line3 {
+  position: relative;
+  top: -3px;
+  right: 3px;
+  width: 18px;
+  transform: rotate(45deg);
+}

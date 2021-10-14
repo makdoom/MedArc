@@ -9,7 +9,7 @@ const About = () => {
       <div className="container">
         <div className="about-section">
           <div className="title-section">
-            <h2 className="about-title">About Us</h2>
+            <h2 className="about-title">Who We Are</h2>
           </div>
 
           <div className="content-section">
