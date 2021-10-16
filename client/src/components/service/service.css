@@ -1,0 +1,122 @@
+.service-container {
+  height: 100vh;
+  border: 1px solid #000;
+}
+
+.service-section {
+  position: relative;
+}
+.title-section {
+  position: relative;
+  /* border: 1px solid #000; */
+}
+
+.title-section .service-title {
+  width: fit-content;
+  padding: 1rem 2rem;
+  margin: 0 auto;
+  background: var(--primary-background);
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  z-index: 1;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.title-section::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  height: 18px;
+  width: 100%;
+  z-index: -1;
+  border-top: 2px solid #d3d3d3;
+  border-left: 2px solid #d3d3d3;
+  border-right: 2px solid #d3d3d3;
+}
+/* .service-section::after {
+    position: absolute;
+    content: "";
+    bottom: 0%;
+    left: 0;
+    height: 18px;
+    width: 100%;
+    z-index: -1;
+    border-bottom: 2px solid #d3d3d3;
+    border-left: 2px solid #d3d3d3;
+    border-right: 2px solid #d3d3d3;
+  } */
+.service-section {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  min-height: 80vh;
+  position: relative;
+  /* border: 1px solid #000; */
+}
+.content-section {
+  margin: 4rem 0;
+  padding: 10px;
+}
+.service-content {
+}
+.service-content .service-text {
+  font-size: 1.4rem;
+  color: var(--gray-dark);
+  text-align: justify;
+}
+.service-text span {
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+.service-side-img {
+  position: relative;
+}
+.service-side-img img {
+  width: 100%;
+  height: auto;
+}
+.service-side-img .doc-gif {
+  position: absolute;
+  bottom: 25px;
+  left: 60px;
+  width: 323px;
+  height: 210px;
+}
+.believe-list {
+}
+.believe-list .believe-link {
+  width: 80%;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.believe-list .believe-link .link-box {
+  display: flex;
+  align-items: center;
+  border-top-left-radius: 27px;
+  border-bottom-left-radius: 27px;
+  background: var(--secondary-light-color);
+}
+.link-box .link-number {
+  position: relative;
+  z-index: 5;
+  height: 40px;
+  width: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  font-weight: 600;
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+.link-box .link-text {
+  margin-bottom: 0;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  /* color: var(--gray-dark); */
+}

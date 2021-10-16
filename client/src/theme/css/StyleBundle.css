@@ -34,6 +34,7 @@
   --primary-color: #1CA944;
   /* --secondary-color: #FF931F; */
   --secondary-color: #E36414;
+  --secondary-light-color: #f1dacd;
   --primary-light-color: #8fffbb;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
