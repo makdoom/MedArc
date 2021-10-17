@@ -1,30 +1,31 @@
 .hero {
-  /* border: 1px solid #000; */
-  min-height: 80vh;
+  min-height: 90vh;
   display: flex;
   align-items: center;
   line-height: 1.5;
 }
 
-.hero-left,
+.hero-left {
+  flex: 0.6;
+}
 .hero-right {
-  flex: 1;
+  flex: 0.4;
 }
 .tagline h2 {
-  font-size: 4rem;
+  font-size: 3.8rem;
   font-weight: 800;
 }
 .sub-tagline {
   margin: 1.5rem 0;
   font-size: 1.5rem;
-  color: var(--secondary-text-color);
+  color: var(--gray-dark);
 }
 .get-cta-btn {
   margin-top: 3.5rem;
   border: none;
   outline: none;
   font-weight: 500;
-  background: var(--secondary-color);
+  background: var(--primary-color);
   padding: 12px 30px;
   color: white;
   border-radius: 8px !important;
@@ -70,13 +71,14 @@
 }
 .hero-img {
   position: relative;
+  text-align: right;
 }
 
 .hero-img .arc {
   animation: MoveUpDown 5s linear infinite;
   position: relative;
 }
-
+/* 
 @keyframes MoveUpDown {
   0%,
   100% {
@@ -85,4 +87,4 @@
   50% {
     bottom: 30px;
   }
-}
+} */

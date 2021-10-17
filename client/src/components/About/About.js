@@ -1,22 +1,22 @@
 import React from "react";
 import "./about.css";
+
 import about from "../../assets/images/about.png";
-// import about from "../../assets/images/abt.png";
-// import doc from "../../assets/images/doctor.gif";
-import doc from "../../assets/images/dp.gif";
 
 const About = () => {
   return (
     <div className="about-container">
       <div className="container">
         <div className="about-section">
-          <div className="title-section">
-            <h2 className="about-title">Who We Are</h2>
-          </div>
-
-          <div className="content-section">
-            <div className="row align-items-center">
-              <div className="col-md-6">
+          <div className="row">
+            <div className="col-md-6">
+              <div className="about-left">
+                <div className="title-section">
+                  <h2 className="about-title">
+                    {" "}
+                    <span className="number">02.</span> Who We Are
+                  </h2>
+                </div>
                 <div className="about-content">
                   <p className="about-text">
                     over the last decade, society has witnessed an explosion of
@@ -45,11 +45,10 @@ const About = () => {
                   </p>
                 </div>
               </div>
-              <div className="col-md-6">
-                <div className="about-side-img">
-                  <img src={about} alt="about-img" />
-                  {/* <img src={doc} alt="about-img" /> */}
-                </div>
+            </div>
+            <div className="col-md-6">
+              <div className="about-right">
+                <img src={about} alt="about-img" />
               </div>
             </div>
           </div>

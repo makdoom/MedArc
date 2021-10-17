@@ -22,3 +22,23 @@ section {
   left: 0;
   z-index: -1;
 }
+
+#move-text-container {
+  background: var(--primary-color);
+  padding: 15px;
+}
+.move-text {
+  position: relative;
+}
+.move-text .main-head {
+  font-size: 4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fdd7c4;
+}
+.move-text span {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fdd7c4;
+}
