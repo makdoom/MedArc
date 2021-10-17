@@ -1,6 +1,4 @@
 import "./App.css";
-import "./theme/css/PluginBundle.css";
-import "./theme/css/StyleBundle.css";
 
 import Home from "./components/Home/Home";
 import greenShadow from "./assets/images/greenShadow.svg";
