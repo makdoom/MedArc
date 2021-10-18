@@ -4,6 +4,7 @@ import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Service from "./components/service/Service";
 import Testimonial from "./components/testimonial/Testimonial";
+import Contact from "./components/contact/Contact";
 // import $ from jquery;
 
 function App() {
@@ -26,6 +27,9 @@ function App() {
       </section>
       <section id="testimonial">
         <Testimonial />
+      </section>
+      <section id="contact">
+        <Contact />
       </section>
     </div>
   );

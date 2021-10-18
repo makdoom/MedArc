@@ -4,6 +4,7 @@ import "./testimonial.css";
 import user1 from "../../assets/images/test1.jpg";
 import user2 from "../../assets/images/test2.jpg";
 import user3 from "../../assets/images/test3.jpg";
+import quote from "../../assets/images/quote.svg";
 
 const Testimonial = () => {
   return (
@@ -22,6 +23,7 @@ const Testimonial = () => {
                 <ul class="slider testimonials-slider">
                   <li class="slide-item">
                     <div class="first">
+                      <img className="quote" src={quote} alt="" />
                       <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit. Sapiente nihil quidem iusto ut odit voluptatum,
@@ -47,6 +49,8 @@ const Testimonial = () => {
                   </li>
                   <li class="slide-item">
                     <div class="first">
+                      <img className="quote" src={quote} alt="" />
+
                       <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit. Sapiente nihil quidem iusto ut odit voluptatum,
@@ -72,6 +76,8 @@ const Testimonial = () => {
                   </li>
                   <li class="slide-item">
                     <div class="first">
+                      <img className="quote" src={quote} alt="" />
+
                       <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit. Sapiente nihil quidem iusto ut odit voluptatum,
@@ -97,6 +103,8 @@ const Testimonial = () => {
                   </li>
                   <li class="slide-item">
                     <div class="first">
+                      <img className="quote" src={quote} alt="" />
+
                       <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit. Sapiente nihil quidem iusto ut odit voluptatum,
@@ -122,6 +130,8 @@ const Testimonial = () => {
                   </li>
                   <li class="slide-item">
                     <div class="first">
+                      <img className="quote" src={quote} alt="" />
+
                       <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit. Sapiente nihil quidem iusto ut odit voluptatum,
@@ -147,6 +157,8 @@ const Testimonial = () => {
                   </li>
                   <li class="slide-item">
                     <div class="first">
+                      <img className="quote" src={quote} alt="" />
+
                       <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit. Sapiente nihil quidem iusto ut odit voluptatum,

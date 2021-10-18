@@ -1,0 +1,116 @@
+.contact-container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.contact-section {
+  position: relative;
+  min-width: 1100px;
+  min-height: 550px;
+  z-index: 1000;
+}
+.contact-section .contact-info {
+  position: absolute;
+  top: 40px;
+  width: 350px;
+  height: calc(100% - 80px);
+  background: var(--primary-color);
+  z-index: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+}
+.contact-info .info-sec h2 {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.contact-info .info-sec ul.c-info {
+  position: relative;
+  padding: 0;
+  margin: 20px 0;
+}
+.contact-info .info-sec ul.c-info li {
+  display: flex;
+  margin: 20px 0;
+  cursor: pointer;
+  align-items: center;
+}
+.info-sec ul.c-info li .c-icon i {
+  font-size: 1.5rem;
+  color: #fff;
+}
+.info-sec ul.c-info li .c-text {
+  margin-left: 20px;
+  color: #fff;
+  font-weight: 500;
+}
+.contact-info ul.sci {
+  position: relative;
+  display: flex;
+  padding-left: 0;
+}
+.contact-info ul.sci li {
+  margin-right: 20px;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.contact-info ul.sci li a {
+  border-radius: 50%;
+  font-size: 1.2rem;
+  transition: 0.5s ease;
+  height: 40px;
+  width: 40px;
+  display: grid;
+  place-items: center;
+  background: var(--primary-background);
+}
+
+.contact-info ul.sci li:nth-child(1) a {
+  color: #1877f2;
+}
+.contact-info ul.sci li:nth-child(2) a {
+  color: #cd486b;
+}
+.contact-info ul.sci li:nth-child(3) a {
+  color: #55aded;
+}
+.contact-info ul.sci li:nth-child(4) a {
+  color: #b7081b;
+}
+.contact-info ul.sci li:nth-child(1) a:hover {
+  background: #1877f2;
+  color: #fff;
+}
+.contact-info ul.sci li:nth-child(2) a:hover {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  color: #fff;
+}
+.contact-info ul.sci li:nth-child(3) a:hover {
+  background: #1877f2;
+  color: #fff;
+}
+.contact-info ul.sci li:nth-child(4) a:hover {
+  background: #b7081b;
+  color: #fff;
+}
+.contact-section .contact-form {
+  position: absolute;
+  padding: 70px 50px;
+  padding-left: 250px;
+  margin-left: 150px;
+  width: calc(100% - 150px);
+  height: 100%;
+  background: #fff;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.15);
+}
