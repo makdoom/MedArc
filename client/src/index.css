@@ -58,7 +58,7 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: var(--primary-background);
+  /* background-color: var(--primary-background); */
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
@@ -67,6 +67,10 @@ a {
 }
 li {
   list-style: none;
+}
+body.bg-fixed {
+  position: fixed;
+  width:100%;
 }
 /* 
 @media screen and (min-width: 1000px) {

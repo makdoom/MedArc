@@ -55,7 +55,87 @@ const Contact = () => {
               </li>
             </ul>
           </div>
-          <div className="contact-form"></div>
+          <div className="contact-form">
+            <div className="form-box">
+              <div className="form">
+                <form>
+                  <div class="card-body">
+                    <h2>Send a Message</h2>
+                    <div className="row">
+                      <div className="col-md-6">
+                        <div class="form-group">
+                          <label>
+                            First Name
+                          </label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Enter email"
+                          />
+                        </div>
+                      </div>
+                      <div className="col-md-6">
+                        <div class="form-group">
+                          <label>
+                            Last Name
+                          </label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Enter email"
+                          />
+                        </div>
+                      </div>
+                      <div className="col-md-6">
+                        <div class="form-group">
+                          <label>
+                            Mobile Number
+                          </label>
+                          <input
+                            type="tel"
+                            class="form-control"
+                            placeholder="Enter email"
+                          />
+                        </div>
+                      </div>
+                      <div className="col-md-6">
+                        <div class="form-group">
+                          <label>
+                            Email address
+                          </label>
+                          <input
+                            type="email"
+                            class="form-control"
+                            placeholder="Enter email"
+                          />
+                        </div>
+                      </div>
+                      <div className="col-md-12">
+                        <div class="form-group mb-1">
+                          <label for="exampleTextarea">
+                            Message
+                          </label>
+                          <textarea
+                            class="form-control"
+                            id="exampleTextarea"
+                            rows="3"
+                          ></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <button type="reset" class="btn btn-primary mr-2 submit">
+                      Submit
+                    </button>
+                    <button type="reset" class="btn btn-secondary reset">
+                      Cancel
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

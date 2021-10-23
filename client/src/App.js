@@ -5,7 +5,6 @@ import About from "./components/About/About";
 import Service from "./components/service/Service";
 import Testimonial from "./components/testimonial/Testimonial";
 import Contact from "./components/contact/Contact";
-// import $ from jquery;
 
 function App() {
   return (
@@ -31,6 +30,11 @@ function App() {
       <section id="contact">
         <Contact />
       </section>
+      <footer>
+        <div className="design">
+          <p>Design and Developed by <a href="https://makdoom.github.io/">Makdoom Shaikh</a> With ❤️</p>
+        </div>
+      </footer>
     </div>
   );
 }

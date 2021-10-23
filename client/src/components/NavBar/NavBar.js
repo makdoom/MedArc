@@ -7,6 +7,7 @@ const NavBar = () => {
   const handleNavbar = () => {
     const burger = document.querySelector(".burger");
     const navLinks = document.querySelector(".nav-links");
+    document.body.classList.toggle("bg-fixed")
     navLinks.classList.toggle("active");
     burger.classList.toggle("active");
   };

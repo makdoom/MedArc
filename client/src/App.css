@@ -3,11 +3,8 @@
   min-height: 100vh;
   position: relative;
 }
-
 section {
   height: 100vh;
-  /* margin: 2rem 0; */
-  /* border: 1px solid #000; */
 }
 .bg-orange-shadow {
   position: absolute;
@@ -15,14 +12,12 @@ section {
   right: 0;
   z-index: -1;
 }
-
 .bg-green-shadow {
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
 }
-
 #move-text-container {
   background: var(--primary-color);
   padding: 15px;
@@ -41,4 +36,14 @@ section {
   font-size: 2rem;
   font-weight: 800;
   color: #fdd7c4;
+}
+footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+footer .design {
+  font-size: 1.1rem;
 }
