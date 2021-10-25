@@ -1,7 +1,7 @@
 import React from "react";
 import "./navBar.css";
 
-import arc from "../../assets/images/arc.svg";
+import arc from "../../assets/svg/arc.svg";
 
 const NavBar = () => {
   const handleNavbar = () => {

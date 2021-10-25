@@ -1,8 +1,21 @@
 .contact-container {
+  margin-top: 20rem;
   height: 100%;
   width: 100%;
   display: grid;
   place-items: center;
+}
+.contact-top {
+  text-align: center;
+}
+.contact-top .contact-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: .7rem;
+}
+.contact-top p {
+  font-size: 1.3rem;
+  color: var(--gray-dark);
 }
 .contact-section {
   position: relative;
@@ -38,6 +51,7 @@
   margin: 20px 0;
   cursor: pointer;
   align-items: center;
+  font-size: 1.1rem;
 }
 .info-sec ul.c-info li .c-icon i {
   font-size: 1.5rem;
@@ -113,7 +127,9 @@
   width: calc(100% - 150px);
   height: 100%;
   background: #fff;
-  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.15);
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
 }
 
 .contact-form .card-body {

@@ -22,7 +22,7 @@
   text-align: justify;
 }
 .service-right .service-content .service-text {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: var(--gray-dark);
 }
 .service-left {
@@ -43,7 +43,7 @@
 }
 .service-content .features li {
   margin-bottom: 0.2rem;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 .service-content .features li i {
   color: #02bb02;

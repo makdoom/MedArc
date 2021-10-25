@@ -1,8 +1,8 @@
 import React from "react";
 import "./hero.css";
 
-import arc from "../../assets/images/arc.svg";
-import arcShadow from "../../assets/images/arcShadow.svg";
+import arc from "../../assets/svg/arc.svg";
+import arcShadow from "../../assets/svg/arcShadow.svg";
 
 const Hero = () => {
   return (
@@ -29,10 +29,14 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="hero-right text-center">
+      <div className="hero-right">
         <div className="hero-img">
           <img src={arc} alt="arc" className="arc" />
           <img src={arcShadow} alt="arcShadow" className="arc-shadow" />
+
+          <div className="pulse-container">
+            <div className="pulse-1"></div>
+          </div>
         </div>
       </div>
     </div>

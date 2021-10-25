@@ -56,7 +56,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Inter", sans-serif;
-  font-size: 1rem;
+  font-size: 1rem !important;
   line-height: 1.6;
   /* background-color: var(--primary-background); */
   overflow-x: hidden;

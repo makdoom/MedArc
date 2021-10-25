@@ -5,10 +5,17 @@ const Contact = () => {
   return (
     <div className="contact-container">
       <div className="container">
+        <div className="contact-top">
+          <h2 className="contact-title">
+            {" "}
+            <span className="number">05.</span> Get In Touch
+          </h2>
+          <p>We're here to help and answer any question you might have <br /> We look forward to hearing from you 😊 </p>
+        </div>
         <div className="contact-section">
           <div className="contact-info">
             <div className="info-sec">
-              <h2>Get in Touch</h2>
+              <h2>Contact Info</h2>
               <ul className="c-info">
                 <li>
                   <span className="c-icon">
@@ -64,9 +71,7 @@ const Contact = () => {
                     <div className="row">
                       <div className="col-md-6">
                         <div class="form-group">
-                          <label>
-                            First Name
-                          </label>
+                          <label>First Name</label>
                           <input
                             type="text"
                             class="form-control"
@@ -76,9 +81,7 @@ const Contact = () => {
                       </div>
                       <div className="col-md-6">
                         <div class="form-group">
-                          <label>
-                            Last Name
-                          </label>
+                          <label>Last Name</label>
                           <input
                             type="text"
                             class="form-control"
@@ -88,9 +91,7 @@ const Contact = () => {
                       </div>
                       <div className="col-md-6">
                         <div class="form-group">
-                          <label>
-                            Mobile Number
-                          </label>
+                          <label>Mobile Number</label>
                           <input
                             type="tel"
                             class="form-control"
@@ -100,9 +101,7 @@ const Contact = () => {
                       </div>
                       <div className="col-md-6">
                         <div class="form-group">
-                          <label>
-                            Email address
-                          </label>
+                          <label>Email address</label>
                           <input
                             type="email"
                             class="form-control"
@@ -112,9 +111,7 @@ const Contact = () => {
                       </div>
                       <div className="col-md-12">
                         <div class="form-group mb-1">
-                          <label for="exampleTextarea">
-                            Message
-                          </label>
+                          <label for="exampleTextarea">Message</label>
                           <textarea
                             class="form-control"
                             id="exampleTextarea"
