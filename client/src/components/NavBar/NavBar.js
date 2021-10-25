@@ -15,7 +15,7 @@ const NavBar = () => {
     <div className="container-fluid">
       <nav>
         <div className="logo">
-          <h3>MedArc</h3>
+          <h3>Med<span>Arc</span></h3>
         </div>
         <ul className="nav-links">
           <li className="nav-link">

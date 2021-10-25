@@ -23,12 +23,16 @@
   --light: #f3f6f9;
   --dark: #181c32;
   --white: #ffffff;
-  --primary-background: #fef8f0;
-  /* --secondary-text-color: #21232c; */
-  /* --secondary-color: #FF931F; */
+  --primary-color:#9747FF;
+  --secondary-color: #4DAFED;
+  --primary-background: #ECEBFF;
+  --secondary-background:#EFF9FF;
+  /* --primary-background: #fef8f0;
+  --secondary-text-color: #21232c;
+  --secondary-color: #FF931F;
   --primary-color: #f9844a;
   --primary-light-color: #fdd7c4;
-  --primary-light-color: #8fffbb;
+  --primary-light-color: #8fffbb; */
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;

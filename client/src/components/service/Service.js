@@ -36,37 +36,37 @@ const Service = () => {
                   </p>
                   <ul className="features">
                     <li>
-                      <i class="bi bi-check2"></i>
+                      <i className="bi bi-check2"></i>
                       <span className="feature-text">
                         You should own your data
                       </span>
                     </li>
                     <li>
-                      <i class="bi bi-check2"></i>
+                      <i className="bi bi-check2"></i>
                       <span className="feature-text">
                         You should have access to all your data
                       </span>
                     </li>
                     <li>
-                      <i class="bi bi-check2"></i>
+                      <i className="bi bi-check2"></i>
                       <span className="feature-text">
                         You should have confidence that your data is safe
                       </span>
                     </li>
                     <li>
-                      <i class="bi bi-check2"></i>
+                      <i className="bi bi-check2"></i>
                       <span className="feature-text">
                         You should be able to trust and understand your data
                       </span>
                     </li>
                     <li>
-                      <i class="bi bi-check2"></i>
+                      <i className="bi bi-check2"></i>
                       <span className="feature-text">
                         You should be able to control who can access your data
                       </span>
                     </li>
                     <li>
-                      <i class="bi bi-check2"></i>
+                      <i className="bi bi-check2"></i>
                       <span className="feature-text">
                         You should be able to help society with your data
                       </span>

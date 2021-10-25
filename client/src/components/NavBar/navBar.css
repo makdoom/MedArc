@@ -10,9 +10,13 @@ nav {
 }
 nav .logo h3 {
   letter-spacing: 1.5px;
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 0;
   font-weight: 700;
+  color: var(--primary-color);
+}
+nav .logo h3 span {
+  color: var(--secondary-color);
 }
 nav .nav-links {
   position: fixed;

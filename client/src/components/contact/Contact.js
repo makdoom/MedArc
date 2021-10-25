@@ -19,7 +19,7 @@ const Contact = () => {
               <ul className="c-info">
                 <li>
                   <span className="c-icon">
-                    <i class="bi bi-geo-alt"></i>
+                    <i className="bi bi-geo-alt"></i>
                   </span>
                   <span className="c-text">
                     58, Meadowbrook Road, Los Angeles, CA 90015
@@ -27,13 +27,13 @@ const Contact = () => {
                 </li>
                 <li>
                   <span className="c-icon">
-                    <i class="bi bi-envelope"></i>
+                    <i className="bi bi-envelope"></i>
                   </span>
                   <span className="c-text">info@medarc.com</span>
                 </li>
                 <li>
                   <span className="c-icon">
-                    <i class="fa-brands fa-whatsapp"></i>
+                    <i className="fa-brands fa-whatsapp"></i>
                   </span>
                   <span className="c-text">855-785-7415</span>
                 </li>
@@ -42,22 +42,22 @@ const Contact = () => {
             <ul className="sci">
               <li>
                 <a href="#">
-                  <i class="fa-brands fa-facebook-f"></i>
+                  <i className="fa-brands fa-facebook-f"></i>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <i class="fa-brands fa-instagram"></i>
+                  <i className="fa-brands fa-instagram"></i>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <i class="fa-brands fa-twitter"></i>
+                  <i className="fa-brands fa-twitter"></i>
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <i class="fa-brands fa-pinterest-p"></i>
+                  <i className="fa-brands fa-pinterest-p"></i>
                 </a>
               </li>
             </ul>
@@ -66,54 +66,54 @@ const Contact = () => {
             <div className="form-box">
               <div className="form">
                 <form>
-                  <div class="card-body">
+                  <div className="card-body">
                     <h2>Send a Message</h2>
                     <div className="row">
                       <div className="col-md-6">
-                        <div class="form-group">
+                        <div className="form-group">
                           <label>First Name</label>
                           <input
                             type="text"
-                            class="form-control"
+                            className="form-control"
                             placeholder="Enter email"
                           />
                         </div>
                       </div>
                       <div className="col-md-6">
-                        <div class="form-group">
+                        <div className="form-group">
                           <label>Last Name</label>
                           <input
                             type="text"
-                            class="form-control"
+                            className="form-control"
                             placeholder="Enter email"
                           />
                         </div>
                       </div>
                       <div className="col-md-6">
-                        <div class="form-group">
+                        <div className="form-group">
                           <label>Mobile Number</label>
                           <input
                             type="tel"
-                            class="form-control"
+                            className="form-control"
                             placeholder="Enter email"
                           />
                         </div>
                       </div>
                       <div className="col-md-6">
-                        <div class="form-group">
+                        <div className="form-group">
                           <label>Email address</label>
                           <input
                             type="email"
-                            class="form-control"
+                            className="form-control"
                             placeholder="Enter email"
                           />
                         </div>
                       </div>
                       <div className="col-md-12">
-                        <div class="form-group mb-1">
+                        <div className="form-group mb-1">
                           <label for="exampleTextarea">Message</label>
                           <textarea
-                            class="form-control"
+                            className="form-control"
                             id="exampleTextarea"
                             rows="3"
                           ></textarea>
@@ -121,11 +121,11 @@ const Contact = () => {
                       </div>
                     </div>
                   </div>
-                  <div class="card-footer">
-                    <button type="reset" class="btn btn-primary mr-2 submit">
+                  <div className="card-footer">
+                    <button type="reset" className="btn btn-primary mr-2 submit">
                       Submit
                     </button>
-                    <button type="reset" class="btn btn-secondary reset">
+                    <button type="reset" className="btn btn-secondary reset">
                       Cancel
                     </button>
                   </div>

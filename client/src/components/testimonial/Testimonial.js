@@ -19,19 +19,19 @@ const Testimonial = () => {
         <img className="wave-top" src={waveTop} alt="" />
         <img className="wave-bottom" src={waveTop} alt="" />
       <section className="one">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 bd">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6 bd">
               <div className="testimonial-right">
-                <div class="block-title ">
+                <div className="block-title ">
                   <h2>
                     <span>04. </span>
                     Testimonials
                   </h2>
                 </div>
-                <ul class="slider testimonials-slider">
-                  <li class="slide-item">
-                    <div class="first">
+                <ul className="slider testimonials-slider">
+                  <li className="slide-item">
+                    <div className="first">
                       <p>
                         <img className="quote" src={quoteOpen} alt="" />
                         &nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -45,19 +45,19 @@ const Testimonial = () => {
                       <h3>Delila Rayam</h3>
                       <div className="social-links">
                         <a href="#" className="fb">
-                          <i class="bi bi-facebook"></i>
+                          <i className="bi bi-facebook"></i>
                         </a>
                         <a href="#" className="insta">
-                          <i class="bi bi-instagram"></i>
+                          <i className="bi bi-instagram"></i>
                         </a>
                         <a href="#" className="whatsapp">
-                          <i class="bi bi-whatsapp"></i>
+                          <i className="bi bi-whatsapp"></i>
                         </a>
                       </div>
                     </div>
                   </li>
-                  <li class="slide-item">
-                    <div class="first">
+                  <li className="slide-item">
+                    <div className="first">
                       <p><img className="quote" src={quoteOpen} alt="" />
                         &nbsp;Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit. Sapiente nihil quidem iusto ut odit voluptatum,
@@ -70,19 +70,19 @@ const Testimonial = () => {
                       <h3>Terrilyn Werme</h3>
                       <div className="social-links">
                         <a href="#" className="fb">
-                          <i class="bi bi-facebook"></i>
+                          <i className="bi bi-facebook"></i>
                         </a>
                         <a href="#" className="insta">
-                          <i class="bi bi-instagram"></i>
+                          <i className="bi bi-instagram"></i>
                         </a>
                         <a href="#" className="whatsapp">
-                          <i class="bi bi-whatsapp"></i>
+                          <i className="bi bi-whatsapp"></i>
                         </a>
                       </div>
                     </div>
                   </li>
-                  <li class="slide-item">
-                    <div class="first">
+                  <li className="slide-item">
+                    <div className="first">
                         <p><img className="quote" src={quoteOpen} alt="" />
                         &nbsp;
                         Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -96,19 +96,19 @@ const Testimonial = () => {
                       <h3>Kyle Demayo</h3>
                       <div className="social-links">
                         <a href="#" className="fb">
-                          <i class="bi bi-facebook"></i>
+                          <i className="bi bi-facebook"></i>
                         </a>
                         <a href="#" className="insta">
-                          <i class="bi bi-instagram"></i>
+                          <i className="bi bi-instagram"></i>
                         </a>
                         <a href="#" className="whatsapp">
-                          <i class="bi bi-whatsapp"></i>
+                          <i className="bi bi-whatsapp"></i>
                         </a>
                       </div>
                     </div>
                   </li>
-                  <li class="slide-item">
-                    <div class="first">
+                  <li className="slide-item">
+                    <div className="first">
                       <p><img className="quote" src={quoteOpen} alt="" />
                         &nbsp;
                         Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -122,19 +122,19 @@ const Testimonial = () => {
                       <h3>Minta Hadad</h3>
                       <div className="social-links">
                         <a href="#" className="fb">
-                          <i class="bi bi-facebook"></i>
+                          <i className="bi bi-facebook"></i>
                         </a>
                         <a href="#" className="insta">
-                          <i class="bi bi-instagram"></i>
+                          <i className="bi bi-instagram"></i>
                         </a>
                         <a href="#" className="whatsapp">
-                          <i class="bi bi-whatsapp"></i>
+                          <i className="bi bi-whatsapp"></i>
                         </a>
                       </div>
                     </div>
                   </li>
-                  <li class="slide-item">
-                    <div class="first">
+                  <li className="slide-item">
+                    <div className="first">
                       <p><img className="quote" src={quoteOpen} alt="" />
                         &nbsp;
                         Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -148,19 +148,19 @@ const Testimonial = () => {
                       <h3>Sherman Cibrian</h3>
                       <div className="social-links">
                         <a href="#" className="fb">
-                          <i class="bi bi-facebook"></i>
+                          <i className="bi bi-facebook"></i>
                         </a>
                         <a href="#" className="insta">
-                          <i class="bi bi-instagram"></i>
+                          <i className="bi bi-instagram"></i>
                         </a>
                         <a href="#" className="whatsapp">
-                          <i class="bi bi-whatsapp"></i>
+                          <i className="bi bi-whatsapp"></i>
                         </a>
                       </div>
                     </div>
                   </li>
-                  <li class="slide-item">
-                    <div class="first">
+                  <li className="slide-item">
+                    <div className="first">
                       <p><img className="quote" src={quoteOpen} alt="" />
                         &nbsp;
                         Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -174,13 +174,13 @@ const Testimonial = () => {
                       <h3>Adrianne Hagans</h3>
                       <div className="social-links">
                         <a href="#" className="fb">
-                          <i class="bi bi-facebook"></i>
+                          <i className="bi bi-facebook"></i>
                         </a>
                         <a href="#" className="insta">
-                          <i class="bi bi-instagram"></i>
+                          <i className="bi bi-instagram"></i>
                         </a>
                         <a href="#" className="whatsapp">
-                          <i class="bi bi-whatsapp"></i>
+                          <i className="bi bi-whatsapp"></i>
                         </a>
                       </div>
                     </div>
@@ -189,46 +189,46 @@ const Testimonial = () => {
               </div>
             </div>
 
-            <div class="col-md-6 d-flex bd justify-content-center">
-              <div class="my-auto">
+            <div className="col-md-6 d-flex bd justify-content-center">
+              <div className="my-auto">
                 <div id="testimonials-slider-pager">
-                  <div class="pager-one">
-                    <a href="#" class="pager-item active" data-slide-index="0">
+                  <div className="pager-one">
+                    <a href="#" className="pager-item active" data-slide-index="0">
                       <img src={user1} />
                     </a>
-                    <a href="#" class="pager-item" data-slide-index="1">
+                    <a href="#" className="pager-item" data-slide-index="1">
                       <img src={user2} alt="Awesome Image" />
                     </a>
-                    <a href="#" class="pager-item" data-slide-index="2">
+                    <a href="#" className="pager-item" data-slide-index="2">
                       <img src={user3} alt="Awesome Image" />
                     </a>
-                    <a href="#" class="pager-item" data-slide-index="3">
+                    <a href="#" className="pager-item" data-slide-index="3">
                       <img src={user4} alt="Awesome Image" />
                     </a>
-                    <a href="#" class="pager-item" data-slide-index="4">
+                    <a href="#" className="pager-item" data-slide-index="4">
                       <img src={user5} alt="Awesome Image" />
                     </a>
-                    <a href="#" class="pager-item" data-slide-index="5">
+                    <a href="#" className="pager-item" data-slide-index="5">
                       <img src={user6} alt="Awesome Image" />
                     </a>
                   </div>
-                  <div class="pager-two">
-                    <a href="#" class="pager-item active" data-slide-index="0">
+                  <div className="pager-two">
+                    <a href="#" className="pager-item active" data-slide-index="0">
                       <img src={user1} />
                     </a>
-                    <a href="#" class="pager-item" data-slide-index="1">
+                    <a href="#" className="pager-item" data-slide-index="1">
                       <img src={user2} alt="Awesome Image" />
                     </a>
-                    <a href="#" class="pager-item" data-slide-index="2">
+                    <a href="#" className="pager-item" data-slide-index="2">
                       <img src={user3} alt="Awesome Image" />
                     </a>
-                    <a href="#" class="pager-item" data-slide-index="3">
+                    <a href="#" className="pager-item" data-slide-index="3">
                       <img src={user4} alt="Awesome Image" />
                     </a>
-                    <a href="#" class="pager-item" data-slide-index="4">
+                    <a href="#" className="pager-item" data-slide-index="4">
                       <img src={user5} alt="Awesome Image" />
                     </a>
-                    <a href="#" class="pager-item" data-slide-index="5">
+                    <a href="#" className="pager-item" data-slide-index="5">
                       <img src={user6} alt="Awesome Image" />
                     </a>
                   </div>
