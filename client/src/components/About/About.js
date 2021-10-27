@@ -49,6 +49,7 @@ const About = () => {
             <div className="col-md-6">
               <div className="about-right">
                 <img src={about} alt="about-img" />
+                
               </div>
             </div>
           </div>
