@@ -17,8 +17,8 @@ const Hero = () => {
           </div>
           <div className="sub-tagline">
             <p>
-              Store your medical data on Blockchain to ensure 100% security and
-              immutability
+              Store your medical data on Blockchain to ensure 100% <br />{" "}
+              security and immutability
             </p>
           </div>
           <div className="cta-btn">
@@ -108,10 +108,27 @@ const Hero = () => {
             <div className="pulse-1"></div>
           </div>
           <div className="fig-lines">
-            <div className="line1-container">
+            <div className="line-container">
               <div className="line1-text">
                 <p>Blockchain</p>
                 <svg
+                  className="line1"
+                  width="158"
+                  height="172"
+                  viewBox="0 0 158 172"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    id="line-svg"
+                    d="M156.5 170.5L1.5 38.5V1.5"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+
+                {/* <svg
                   className="line1"
                   width="121"
                   height="197"
@@ -126,21 +143,59 @@ const Hero = () => {
                     stroke-width="1.5"
                     stroke-linecap="round"
                   />
-                </svg>
+                </svg> */}
               </div>
               <div className="line2-text">
                 <p>Blockchain</p>
                 <svg
-                  className="line2"
-                  width="121"
-                  height="197"
-                  viewBox="0 0 121 197"
+                className="line2"
+                  width="157"
+                  height="171"
+                  viewBox="0 0 157 171"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                  id="line-svg"
+                    d="M1 170L156 38V1"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div className="line3-text">
+                <p>Blockchain</p>
+                <svg
+                  className="line3"
+                  width="218"
+                  height="43"
+                  viewBox="0 0 218 43"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     id="line-svg"
-                    d="M119.5 195.5L1.5 67V1"
+                    d="M218 1H15.7592L1 42"
+                    stroke="black"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div className="line4-text">
+                <p>Blockchain</p>
+                <svg
+                  className="line4"
+                  width="218"
+                  height="43"
+                  viewBox="0 0 218 43"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    id="line-svg"
+                    d="M3.8147e-06 1H202.241L217 42"
                     stroke="black"
                     stroke-width="1.5"
                     stroke-linecap="round"

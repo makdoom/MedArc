@@ -113,30 +113,28 @@
 .pulse-container .pulse-1:after {
   animation: pulse 2s 1s ease-out infinite;
 }
-
-.hero-img {
-  border: 1px solid #000;
-}
-.fig-lines{
+.fig-lines {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  border: 1px solid #000;
 }
-.line1-container {
+.line-container {
   position: relative;
-  border: 1px solid red;
+  height: 100%;
 }
-.line1-text{
-  position: relative
+.line1-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(55%, -14%);
 }
 .line1-text p {
   position: absolute;
   top: 0;
   left: 0%;
-  transform: translate(64px, -58px);
+  transform: translate(-57px, -38px);
   background: var(--secondary-background);
   padding: 8px 25px;
   border-radius: 30px;
@@ -145,58 +143,17 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   z-index: 3;
 }
-.line1-text svg.line1 {
+.line2-text {
   position: absolute;
   top: 0;
-  left: 50%;
-  transform: translate(-109%, -23%);
-  /* transform: translate(-106%, -23%); */
+  right: 0;
+  transform: translate(-53%, -14%);
 }
-.line2-text{
-  border: 1px solid green;
-}
-.line2-text svg.line2 {
+.line2-text p {
   position: absolute;
   top: 0;
-  left: 50%;
-  transform: rotateY(180deg) translate(-16%, -24%);
-  /* transform: rotateY(180deg) translate(106%, 23%); */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .fig-lines {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.line1-container {
-  position: relative;
-  border: 1px solid red;
-}
-.line1-text{
-  position: relative
-}
-.line1-text p {
-  position: absolute;
-  top: 0;
-  left: 0%;
-  transform: translate(64px, -58px);
+  right: 0%;
+  transform: translate(65px, -38px);
   background: var(--secondary-background);
   padding: 8px 25px;
   border-radius: 30px;
@@ -205,26 +162,44 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
   z-index: 3;
 }
-.line1-text svg.line1 {
+.line3-text {
   position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-106%, -23%);
-  border: 1px solid #000;
+  top: 0%;
+  left: 0%;
+  transform: translate(23px, 164px);
 }
-.line1-text svg.line2 {
+.line3-text p {
   position: absolute;
-  transform: rotateY(180deg);
   top: 0;
-  right: 50%;
-  transform: translate(+106%, +23%);
-} */
-/* #line-svg {
-  stroke-dasharray: 10;
-  stroke-dashoffset: 10;
-  animation: dash 5s linear alternate infinite;
-} */
-
+  right: 0%;
+  transform: translate(-143px, 21px);
+  background: var(--secondary-background);
+  padding: 8px 25px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  z-index: 3;
+}
+.line4-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-18px, 164px);
+}
+.line4-text p {
+  position: absolute;
+  top: 0;
+  right: 0%;
+  transform: translate(68px, 21px);
+  background: var(--secondary-background);
+  padding: 8px 25px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  z-index: 3;
+}
 #line-svg {
   stroke-dasharray: 10 10;
   animation: dash 4s linear infinite;
@@ -234,9 +209,11 @@
     stroke-dashoffset: -100;
   }
 }
+
 @keyframes pulse {
   100% {
     transform: scale(2.5);
     opacity: 0;
   }
 }
+
