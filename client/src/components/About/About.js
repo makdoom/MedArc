@@ -1,8 +1,6 @@
 import React from "react";
 import "./about.css";
 
-import about from "../../assets/images/about.png";
-
 const About = () => {
   return (
     <div className="about-container">
@@ -48,8 +46,7 @@ const About = () => {
             </div>
             <div className="col-md-6">
               <div className="about-right">
-                <img src={about} alt="about-img" />
-                
+                <img src="/assets/images/about.png" alt="about-img" />
               </div>
             </div>
           </div>

@@ -23,10 +23,12 @@
   --light: #f3f6f9;
   --dark: #181c32;
   --white: #ffffff;
-  --primary-color:#9747FF;
-  --secondary-color: #4DAFED;
-  --primary-background: #ECEBFF;
-  --secondary-background:#EFF9FF;
+  --primary-color: #9747ff;
+  --secondary-color: #4dafed;
+  --primary-background: #ecebff;
+  --secondary-background: #eff9ff;
+
+  /* #f3f4f5 */
   /* --primary-background: #fef8f0;
   --secondary-text-color: #21232c;
   --secondary-color: #FF931F;
@@ -74,7 +76,7 @@ li {
 }
 body.bg-fixed {
   position: fixed;
-  width:100%;
+  width: 100%;
 }
 /* 
 @media screen and (min-width: 1000px) {

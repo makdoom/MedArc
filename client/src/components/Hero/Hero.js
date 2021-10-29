@@ -1,9 +1,6 @@
 import React from "react";
 import "./hero.css";
 
-import logo from "../../assets/svg/logo.png";
-import logoShadow from "../../assets/svg/arcShadow.svg";
-
 const Hero = () => {
   return (
     <div className="hero">
@@ -40,11 +37,11 @@ const Hero = () => {
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M300.053 296.348L155.744 0.156962L-6.29345e-05 297.97C31.0293 263.608 88.336 241.018 153.58 241.947C215.068 242.822 268.914 264.379 300.053 296.348Z"
                 fill="url(#paint0_linear_188:10)"
-                fill-opacity="0.82"
+                fillOpacity="0.82"
               />
               <defs>
                 <linearGradient
@@ -55,8 +52,8 @@ const Hero = () => {
                   y2="300.106"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#7F4BD2" />
-                  <stop offset="1" stop-color="#1CA7EC" />
+                  <stop stopColor="#7F4BD2" />
+                  <stop offset="1" stopColor="#1CA7EC" />
                 </linearGradient>
               </defs>
             </svg>
@@ -76,7 +73,7 @@ const Hero = () => {
                   rx="163.5"
                   ry="41"
                   fill="#E3E3E3"
-                  fill-opacity="0.75"
+                  fillOpacity="0.75"
                 />
               </g>
               <defs>
@@ -87,9 +84,9 @@ const Hero = () => {
                   width="367"
                   height="122"
                   filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB"
+                  colorInterpolationFilters="sRGB"
                 >
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feFlood floodOpacity="0" result="BackgroundImageFix" />
                   <feBlend
                     mode="normal"
                     in="SourceGraphic"
@@ -123,32 +120,15 @@ const Hero = () => {
                     id="line-svg"
                     d="M156.5 170.5L1.5 38.5V1.5"
                     stroke="black"
-                    stroke-width="2"
-                    stroke-linecap="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
                   />
                 </svg>
-
-                {/* <svg
-                  className="line1"
-                  width="121"
-                  height="197"
-                  viewBox="0 0 121 197"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    id="line-svg"
-                    d="M119.5 195.5L1.5 67V1"
-                    stroke="black"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                  />
-                </svg> */}
               </div>
               <div className="line2-text">
                 <p>Blockchain</p>
                 <svg
-                className="line2"
+                  className="line2"
                   width="157"
                   height="171"
                   viewBox="0 0 157 171"
@@ -156,11 +136,11 @@ const Hero = () => {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                  id="line-svg"
+                    id="line-svg"
                     d="M1 170L156 38V1"
                     stroke="black"
-                    stroke-width="2"
-                    stroke-linecap="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
                   />
                 </svg>
               </div>
@@ -178,8 +158,8 @@ const Hero = () => {
                     id="line-svg"
                     d="M218 1H15.7592L1 42"
                     stroke="black"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
                   />
                 </svg>
               </div>
@@ -197,8 +177,8 @@ const Hero = () => {
                     id="line-svg"
                     d="M3.8147e-06 1H202.241L217 42"
                     stroke="black"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
                   />
                 </svg>
               </div>

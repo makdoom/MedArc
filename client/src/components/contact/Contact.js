@@ -10,7 +10,10 @@ const Contact = () => {
             {" "}
             <span className="number">05.</span> Get In Touch
           </h2>
-          <p>We're here to help and answer any question you might have <br /> We look forward to hearing from you 😊 </p>
+          <p>
+            We're here to help and answer any question you might have <br /> We
+            look forward to hearing from you 😊{" "}
+          </p>
         </div>
         <div className="contact-section">
           <div className="contact-info">
@@ -111,7 +114,7 @@ const Contact = () => {
                       </div>
                       <div className="col-md-12">
                         <div className="form-group mb-1">
-                          <label for="exampleTextarea">Message</label>
+                          <label htmlFor="exampleTextarea">Message</label>
                           <textarea
                             className="form-control"
                             id="exampleTextarea"
@@ -122,7 +125,10 @@ const Contact = () => {
                     </div>
                   </div>
                   <div className="card-footer">
-                    <button type="reset" className="btn btn-primary mr-2 submit">
+                    <button
+                      type="reset"
+                      className="btn btn-primary mr-2 submit"
+                    >
                       Submit
                     </button>
                     <button type="reset" className="btn btn-secondary reset">

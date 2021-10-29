@@ -1,8 +1,6 @@
 import React from "react";
 import "./service.css";
 
-// import service from "../../assets/images/service.png";
-
 const Service = () => {
   return (
     <div className="service-container">
@@ -11,7 +9,7 @@ const Service = () => {
           <div className="row">
             <div className="col-md-6">
               <div className="service-left">
-                {/* <img src={service} alt="service-img" /> */}
+                <img src="/assets/svg/service.svg" alt="service-img" />
               </div>
             </div>
             <div className="col-md-6">
@@ -36,37 +34,31 @@ const Service = () => {
                   </p>
                   <ul className="features">
                     <li>
-                      <i className="bi bi-check2"></i>
                       <span className="feature-text">
                         You should own your data
                       </span>
                     </li>
                     <li>
-                      <i className="bi bi-check2"></i>
                       <span className="feature-text">
                         You should have access to all your data
                       </span>
                     </li>
                     <li>
-                      <i className="bi bi-check2"></i>
                       <span className="feature-text">
                         You should have confidence that your data is safe
                       </span>
                     </li>
                     <li>
-                      <i className="bi bi-check2"></i>
                       <span className="feature-text">
                         You should be able to trust and understand your data
                       </span>
                     </li>
                     <li>
-                      <i className="bi bi-check2"></i>
                       <span className="feature-text">
                         You should be able to control who can access your data
                       </span>
                     </li>
                     <li>
-                      <i className="bi bi-check2"></i>
                       <span className="feature-text">
                         You should be able to help society with your data
                       </span>

@@ -1,6 +1,6 @@
 .contact-container {
-  margin-top: 20rem;
-  height: 100%;
+  margin-top: 40rem;
+  height: 100vh;
   width: 100%;
   display: grid;
   place-items: center;
@@ -11,7 +11,7 @@
 .contact-top .contact-title {
   font-size: 2.5rem;
   font-weight: 800;
-  margin-bottom: .7rem;
+  margin-bottom: 0.7rem;
 }
 .contact-top p {
   font-size: 1.3rem;
@@ -67,7 +67,6 @@
   display: flex;
   justify-content: space-around;
   padding-left: 0;
-  
 }
 .contact-info ul.sci li {
   margin-right: 20px;
@@ -133,16 +132,16 @@
 }
 
 .contact-form .card-body {
-  padding: 0 ;
+  padding: 0;
 }
-.contact-form .card-body h2{
+.contact-form .card-body h2 {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #3F4254;
+  color: #3f4254;
   margin-bottom: 20px;
 }
 .form-control:focus {
-  color: #3F4254;
+  color: #3f4254;
   background-color: #ffffff;
   border-color: var(--primary-color);
   outline: 0;
@@ -163,7 +162,7 @@
   align-items: center;
   position: relative;
   overflow: hidden;
-  transition: .4s ease;
+  transition: 0.4s ease;
 }
 .contact-form .card-footer .submit {
   color: white;

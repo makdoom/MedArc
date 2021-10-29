@@ -1,6 +1,6 @@
 .service-section {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
   display: grid;
   place-items: center;
 }
@@ -30,8 +30,7 @@
   place-items: center;
 }
 .service-left img {
-  width: 100%;
-  height: auto;
+  width: 80%;
   /* filter: drop-shadow(5px 5px 5px var(--primary-color)); */
 }
 .service-text span {
@@ -39,7 +38,16 @@
 }
 
 .service-content .features {
-  padding-left: 0;
+  padding-left: 25px;
+}
+ul.features li::before {
+  content: "\2022";
+  color: var(--primary-color);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  font-size: 1.5rem;
 }
 .service-content .features li {
   margin-bottom: 0.2rem;

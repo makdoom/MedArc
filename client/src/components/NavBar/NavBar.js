@@ -1,13 +1,11 @@
 import React from "react";
 import "./navBar.css";
 
-import arc from "../../assets/svg/arc.svg";
-
 const NavBar = () => {
   const handleNavbar = () => {
     const burger = document.querySelector(".burger");
     const navLinks = document.querySelector(".nav-links");
-    document.body.classList.toggle("bg-fixed")
+    document.body.classList.toggle("bg-fixed");
     navLinks.classList.toggle("active");
     burger.classList.toggle("active");
   };
@@ -15,7 +13,9 @@ const NavBar = () => {
     <div className="container-fluid">
       <nav>
         <div className="logo">
-          <h3>Med<span>Arc</span></h3>
+          <h3>
+            Med<span>Arc</span>
+          </h3>
         </div>
         <ul className="nav-links">
           <li className="nav-link">

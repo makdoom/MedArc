@@ -3,9 +3,9 @@
   min-height: 100vh;
   position: relative;
 }
-section {
+/* section {
   height: 100vh;
-}
+} */
 .bg-orange-shadow {
   position: absolute;
   top: 0;
@@ -30,14 +30,14 @@ section {
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #fdd7c4;
+  color: #fff;
 }
 .move-text span {
   font-size: 2rem;
   font-weight: 800;
-  color: #fdd7c4;
+  color: #ffff;
 }
-footer{
+footer {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -46,4 +46,8 @@ footer{
 }
 footer .design {
   font-size: 1.1rem;
+}
+
+footer .design a {
+  color: var(--primary-color);
 }
