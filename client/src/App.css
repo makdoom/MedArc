@@ -19,6 +19,7 @@
   z-index: -1;
 }
 #move-text-container {
+  margin: 6rem 0;
   background: var(--primary-color);
   padding: 15px;
 }

@@ -126,7 +126,7 @@ const Hero = () => {
                 </svg>
               </div>
               <div className="line2-text">
-                <p>Blockchain</p>
+                <p>Immutability</p>
                 <svg
                   className="line2"
                   width="157"
@@ -145,7 +145,7 @@ const Hero = () => {
                 </svg>
               </div>
               <div className="line3-text">
-                <p>Blockchain</p>
+                <p>100% Secure</p>
                 <svg
                   className="line3"
                   width="218"
@@ -164,7 +164,7 @@ const Hero = () => {
                 </svg>
               </div>
               <div className="line4-text">
-                <p>Blockchain</p>
+                <p>Decenteralized</p>
                 <svg
                   className="line4"
                   width="218"

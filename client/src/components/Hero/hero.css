@@ -2,7 +2,6 @@
   min-height: 90vh;
   display: flex;
   align-items: center;
-  line-height: 1.5;
 }
 
 .hero-left {
@@ -68,19 +67,14 @@
 }
 .hero-right {
   flex: 0.4;
-  /* border: 1px solid #000; */
 }
 .hero-img {
   position: relative;
   text-align: center;
   height: 100%;
   width: 100%;
-  /* border: 1px solid #000; */
 }
-.hero-img .arc {
-  animation: MoveUpDown 5s linear infinite;
-  position: relative;
-}
+
 .arc-shadow {
   width: 70%;
 }
@@ -135,12 +129,13 @@
   top: 0;
   left: 0%;
   transform: translate(-57px, -38px);
-  background: var(--secondary-background);
+  background: #fff;
+  background: #fff;
   padding: 8px 25px;
   border-radius: 30px;
   font-size: 1.2rem;
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 7px 40px -10px rgba(150, 170, 180, 0.5);
+
   z-index: 3;
 }
 .line2-text {
@@ -154,12 +149,11 @@
   top: 0;
   right: 0%;
   transform: translate(65px, -38px);
-  background: var(--secondary-background);
   padding: 8px 25px;
   border-radius: 30px;
   font-size: 1.2rem;
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 7px 40px -10px rgba(150, 170, 180, 0.5);
+  background: #fff;
   z-index: 3;
 }
 .line3-text {
@@ -173,12 +167,11 @@
   top: 0;
   right: 0%;
   transform: translate(-143px, 21px);
-  background: var(--secondary-background);
   padding: 8px 25px;
   border-radius: 30px;
   font-size: 1.2rem;
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 7px 40px -10px rgba(150, 170, 180, 0.5);
+  background: #fff;
   z-index: 3;
 }
 .line4-text {
@@ -192,12 +185,11 @@
   top: 0;
   right: 0%;
   transform: translate(68px, 21px);
-  background: var(--secondary-background);
   padding: 8px 25px;
   border-radius: 30px;
   font-size: 1.2rem;
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 7px 40px -10px rgba(150, 170, 180, 0.5);
+  background: #fff;
   z-index: 3;
 }
 #line-svg {
@@ -216,4 +208,3 @@
     opacity: 0;
   }
 }
-

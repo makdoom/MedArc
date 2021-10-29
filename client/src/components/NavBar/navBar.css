@@ -3,9 +3,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   min-height: 8vh;
-  /* position: fixed; */
   position: relative;
-  padding: 2rem 6.5rem;
   width: 100%;
 }
 nav .logo h3 {
@@ -18,6 +16,40 @@ nav .logo h3 {
 nav .logo h3 span {
   color: var(--secondary-color);
 }
+.nav-menu {
+  position: relative;
+}
+.nav-menu a {
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+  margin: 0 15px;
+  padding: 10px 15px;
+  display: inline-block;
+  transition: 0.5s;
+  z-index: 1;
+}
+.nav-menu a.active {
+  color: #9747ff;
+}
+nav .marker {
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  top: 0;
+  left: 0;
+  background: #ecebff;
+  color: #fff;
+  transition: 0.5s;
+  z-index: -1;
+  border-radius: 8px;
+}
+
+/* 
+
 nav .nav-links {
   position: fixed;
   top: 0vh;
@@ -93,4 +125,4 @@ nav .nav-links {
   right: 3px;
   width: 18px;
   transform: rotate(45deg);
-}
+} */

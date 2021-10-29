@@ -1,8 +1,11 @@
 .testimonial-main-container {
-  margin: 35rem 0;
-  padding: 4rem 0;
+  margin: 20rem 0;
+  /* padding: 4rem 0; */
   position: relative;
+  height: 100vh;
   background: var(--primary-color);
+  display: grid;
+  place-items: center;
 }
 .testimonial-main-container .wave-top {
   position: absolute;

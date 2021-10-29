@@ -24,7 +24,7 @@ function App() {
       <section className="Service" id="service">
         <Service />
       </section>
-      <section id="testimonial">
+      <section id="testimonials">
         <Testimonial />
       </section>
       <section id="contact">
@@ -32,7 +32,10 @@ function App() {
       </section>
       <footer>
         <div className="design">
-          <p>Design and Developed by <a href="https://makdoom.github.io/">Makdoom Shaikh</a> With ❤️</p>
+          <p>
+            Design and Developed by{" "}
+            <a href="https://makdoom.github.io/">Makdoom Shaikh</a> With ❤️
+          </p>
         </div>
       </footer>
     </div>
