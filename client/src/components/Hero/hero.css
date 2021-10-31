@@ -48,7 +48,6 @@
 .get-cta-btn:hover i {
   transform: translateX(7px);
 }
-
 .get-cta-btn:hover {
   color: #fff;
   background: #1f1e1e !important;

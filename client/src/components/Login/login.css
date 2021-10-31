@@ -1,0 +1,201 @@
+.login-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+.login-left {
+  flex: 0.3;
+  position: relative;
+  background: linear-gradient(
+    70deg,
+    var(--secondary-background),
+    var(--primary-background)
+  );
+}
+
+.left-header {
+  margin-top: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.left-header .logo-box {
+  margin-bottom: 2.5rem;
+}
+.left-header .logo-box svg {
+  width: 200px !important;
+  animation: MoveUpDown 2s ease infinite;
+}
+.left-header .text-box {
+  text-align: center;
+}
+.left-header .text-box h3 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.left-header .text-box p {
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.login-right {
+  flex: 0.7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid #000; */
+}
+.login-right .form-container {
+  /* border: 1px solid #000; */
+  max-width: 450px;
+  width: 100%;
+  padding: 20px;
+}
+.form-header .header-top {
+  margin-bottom: 2.5rem;
+}
+.form-header h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.form-header p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #b5b5c3 !important;
+  letter-spacing: 0.5px;
+}
+.form-header p a {
+  color: var(--primary-color);
+}
+.form-header .user-type {
+  /* border: 1px solid #000; */
+  position: relative;
+  background: var(--primary-background);
+  display: flex;
+  border-radius: 8px;
+}
+.form-header .user-type a {
+  flex: 0.5;
+  text-align: center;
+  display: block;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  z-index: 1;
+}
+.form-header .user-type a.active {
+  color: #fff;
+}
+.form-header .user-type a.Doctor {
+  margin-right: 10px;
+}
+.form-header .user-type a.Patient {
+  margin-left: 10px;
+}
+
+.form-header .user-type .l-marker {
+  position: absolute;
+  height: 100%;
+  width: 195px;
+  top: 0;
+  left: 0;
+  background: var(--primary-color);
+  /* color: #fff; */
+  transition: 0.5s;
+  /* z-index: 1; */
+  border-radius: 8px;
+}
+
+.form-body {
+  /* border: 1px solid #000; */
+  margin-top: 1.5rem;
+}
+.form-body .form-group {
+  margin-bottom: 1.5rem;
+}
+.form-body .form-group .input-label {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #3f4254;
+  margin-bottom: 1rem;
+}
+.form-body .form-group input {
+  background: #f3f6f9;
+  border-radius: 6px;
+  height: auto;
+  padding: 1.5rem 1.5rem;
+}
+.form-body .form-group .forgot-sec {
+  display: flex;
+  justify-content: space-between;
+}
+.form-body .form-group .forgot-sec a {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+.form-footer button {
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  padding: 0.9rem 2.3rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+  margin: 0.75rem 0;
+}
+.form-footer button.submit-btn {
+  margin-right: 10px;
+  background: var(--primary-color);
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+.submit-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, #fff, transparent);
+  transition: 0.5s;
+}
+.submit-btn:hover::before {
+  left: 100%;
+}
+.submit-btn:hover i {
+  transform: translateX(7px);
+}
+.submit-btn:hover {
+  color: #fff;
+  background: #1f1e1e !important;
+}
+.form-footer button.google-btn {
+  background: var(--secondary-background);
+  color: var(--secondary-color);
+  transition: 0.5s;
+}
+/* .form-footer button.google-btn:hover {
+  background: var(--secondary-color);
+  color: #fff;
+} */
+
+.form-footer button.google-btn svg {
+  margin-right: 0.5rem;
+}
+@keyframes MoveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}

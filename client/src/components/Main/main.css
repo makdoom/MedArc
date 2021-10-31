@@ -1,0 +1,54 @@
+.main-container {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+/* section {
+    height: 100vh;
+  } */
+.bg-orange-shadow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+.bg-green-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+#move-text-container {
+  margin: 6rem 0;
+  background: var(--primary-color);
+  padding: 15px;
+}
+.move-text {
+  position: relative;
+}
+.move-text .main-head {
+  font-size: 4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+}
+.move-text span {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ffff;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+footer .design {
+  font-size: 1.1rem;
+}
+
+footer .design a {
+  color: var(--primary-color);
+}
