@@ -1,10 +1,9 @@
 import React from "react";
-
 import Home from "../Home/Home";
 import About from "../About/About";
 import Service from "../Service/Service";
-import Testimonial from "../Testimonial/Testimonial";
-import Contact from "../Contact/Contact";
+import Contact from '../Contact/Contact'
+import Testimonial from '../Testimonial/Testimonial'
 import "./main.css";
 
 export default function Main() {
