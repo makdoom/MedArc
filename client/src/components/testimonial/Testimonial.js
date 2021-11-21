@@ -29,13 +29,13 @@ const Testimonial = () => {
                       </p>
                       <h3>Delila Rayam</h3>
                       <div className="social-links">
-                        <a href="#" className="fb">
+                        <a href="/" className="fb">
                           <i className="bi bi-facebook"></i>
                         </a>
-                        <a href="#" className="insta">
+                        <a href="/" className="insta">
                           <i className="bi bi-instagram"></i>
                         </a>
-                        <a href="#" className="whatsapp">
+                        <a href="/" className="whatsapp">
                           <i className="bi bi-whatsapp"></i>
                         </a>
                       </div>
@@ -52,13 +52,13 @@ const Testimonial = () => {
                       </p>
                       <h3>Terrilyn Werme</h3>
                       <div className="social-links">
-                        <a href="#" className="fb">
+                        <a href="/" className="fb">
                           <i className="bi bi-facebook"></i>
                         </a>
-                        <a href="#" className="insta">
+                        <a href="/" className="insta">
                           <i className="bi bi-instagram"></i>
                         </a>
-                        <a href="#" className="whatsapp">
+                        <a href="/" className="whatsapp">
                           <i className="bi bi-whatsapp"></i>
                         </a>
                       </div>
@@ -75,13 +75,13 @@ const Testimonial = () => {
                       </p>
                       <h3>Kyle Demayo</h3>
                       <div className="social-links">
-                        <a href="#" className="fb">
+                        <a href="/" className="fb">
                           <i className="bi bi-facebook"></i>
                         </a>
-                        <a href="#" className="insta">
+                        <a href="/" className="insta">
                           <i className="bi bi-instagram"></i>
                         </a>
-                        <a href="#" className="whatsapp">
+                        <a href="/" className="whatsapp">
                           <i className="bi bi-whatsapp"></i>
                         </a>
                       </div>
@@ -98,13 +98,13 @@ const Testimonial = () => {
                       </p>
                       <h3>Minta Hadad</h3>
                       <div className="social-links">
-                        <a href="#" className="fb">
+                        <a href="/" className="fb">
                           <i className="bi bi-facebook"></i>
                         </a>
-                        <a href="#" className="insta">
+                        <a href="/" className="insta">
                           <i className="bi bi-instagram"></i>
                         </a>
-                        <a href="#" className="whatsapp">
+                        <a href="/" className="whatsapp">
                           <i className="bi bi-whatsapp"></i>
                         </a>
                       </div>
@@ -121,13 +121,13 @@ const Testimonial = () => {
                       </p>
                       <h3>Sherman Cibrian</h3>
                       <div className="social-links">
-                        <a href="#" className="fb">
+                        <a href="/" className="fb">
                           <i className="bi bi-facebook"></i>
                         </a>
-                        <a href="#" className="insta">
+                        <a href="/" className="insta">
                           <i className="bi bi-instagram"></i>
                         </a>
-                        <a href="#" className="whatsapp">
+                        <a href="/" className="whatsapp">
                           <i className="bi bi-whatsapp"></i>
                         </a>
                       </div>
@@ -144,13 +144,13 @@ const Testimonial = () => {
                       </p>
                       <h3>Adrianne Hagans</h3>
                       <div className="social-links">
-                        <a href="#" className="fb">
+                        <a href="/" className="fb">
                           <i className="bi bi-facebook"></i>
                         </a>
-                        <a href="#" className="insta">
+                        <a href="/" className="insta">
                           <i className="bi bi-instagram"></i>
                         </a>
-                        <a href="#" className="whatsapp">
+                        <a href="/" className="whatsapp">
                           <i className="bi bi-whatsapp"></i>
                         </a>
                       </div>
@@ -164,76 +164,76 @@ const Testimonial = () => {
                   <div id="testimonials-slider-pager">
                     <div class="pager-one">
                       <a
-                        href="#"
+                        href="/"
                         class="pager-item active"
                         data-slide-index="0"
                       >
-                        <img src="assets/images/user1.jpg" />
+                        <img src="assets/images/user1.jpg" alt="Awesome" />
                       </a>
-                      <a href="#" class="pager-item" data-slide-index="1">
+                      <a href="/" class="pager-item" data-slide-index="1">
                         <img
                           src="assets/images/user2.jpg"
-                          alt="Awesome Image"
+                          alt="Awesome"
                         />
                       </a>
-                      <a href="#" class="pager-item" data-slide-index="2">
+                      <a href="/" class="pager-item" data-slide-index="2">
                         <img
                           src="assets/images/user3.jpg"
-                          alt="Awesome Image"
+                          alt="Awesome"
                         />
                       </a>
-                      <a href="#" class="pager-item" data-slide-index="3">
+                      <a href="/" class="pager-item" data-slide-index="3">
                         <img
                           src="assets/images/user4.jpg"
-                          alt="Awesome Image"
+                          alt="Awesome"
                         />
                       </a>
-                      <a href="#" class="pager-item" data-slide-index="4">
+                      <a href="/" class="pager-item" data-slide-index="4">
                         <img
                           src="assets/images/user5.jpg"
-                          alt="Awesome Image"
+                          alt="Awesome"
                         />
                       </a>
-                      <a href="#" class="pager-item" data-slide-index="5">
+                      <a href="/" class="pager-item" data-slide-index="5">
                         <img
                           src="assets/images/user6.jpg"
-                          alt="Awesome Image"
+                          alt="Awesome"
                         />
                       </a>
                     </div>
                     <div class="pager-two">
                       <a
-                        href="#"
+                        href="/"
                         class="pager-item active"
                         data-slide-index="0"
                       >
-                        <img src="assets/images/user1.jpg" />
+                        <img src="assets/images/user1.jpg"  alt="Awesome" />
                       </a>
-                      <a href="#" class="pager-item" data-slide-index="1">
-                        <img src="assets/images/user2.jpg" />
+                      <a href="/" class="pager-item" data-slide-index="1">
+                        <img src="assets/images/user2.jpg"  alt="Awesome" />
                       </a>
-                      <a href="#" class="pager-item" data-slide-index="2">
+                      <a href="/" class="pager-item" data-slide-index="2">
                         <img
                           src="assets/images/user3.jpg"
-                          alt="Awesome Image"
+                          alt="Awesome"
                         />
                       </a>
-                      <a href="#" class="pager-item" data-slide-index="3">
+                      <a href="/" class="pager-item" data-slide-index="3">
                         <img
                           src="assets/images/user4.jpg"
-                          alt="Awesome Image"
+                          alt="Awesome"
                         />
                       </a>
-                      <a href="#" class="pager-item" data-slide-index="4">
+                      <a href="/" class="pager-item" data-slide-index="4">
                         <img
                           src="assets/images/user5.jpg"
-                          alt="Awesome Image"
+                          alt="Awesome"
                         />
                       </a>
-                      <a href="#" class="pager-item" data-slide-index="5">
+                      <a href="/" class="pager-item" data-slide-index="5">
                         <img
                           src="assets/images/user6.jpg"
-                          alt="Awesome Image"
+                          alt="Awesome"
                         />
                       </a>
                     </div>
@@ -272,13 +272,13 @@ const Testimonial = () => {
                       </p>
                       <h3>Delila Rayam</h3>
                       <div className="social-links">
-                        <a href="#" className="fb">
+                        <a href="/" className="fb">
                           <i className="bi bi-facebook"></i>
                         </a>
-                        <a href="#" className="insta">
+                        <a href="/" className="insta">
                           <i className="bi bi-instagram"></i>
                         </a>
-                        <a href="#" className="whatsapp">
+                        <a href="/" className="whatsapp">
                           <i className="bi bi-whatsapp"></i>
                         </a>
                       </div>
@@ -297,13 +297,13 @@ const Testimonial = () => {
                       </p>
                       <h3>Terrilyn Werme</h3>
                       <div className="social-links">
-                        <a href="#" className="fb">
+                        <a href="/" className="fb">
                           <i className="bi bi-facebook"></i>
                         </a>
-                        <a href="#" className="insta">
+                        <a href="/" className="insta">
                           <i className="bi bi-instagram"></i>
                         </a>
-                        <a href="#" className="whatsapp">
+                        <a href="/" className="whatsapp">
                           <i className="bi bi-whatsapp"></i>
                         </a>
                       </div>
@@ -323,13 +323,13 @@ const Testimonial = () => {
                       </p>
                       <h3>Kyle Demayo</h3>
                       <div className="social-links">
-                        <a href="#" className="fb">
+                        <a href="/" className="fb">
                           <i className="bi bi-facebook"></i>
                         </a>
-                        <a href="#" className="insta">
+                        <a href="/" className="insta">
                           <i className="bi bi-instagram"></i>
                         </a>
-                        <a href="#" className="whatsapp">
+                        <a href="/" className="whatsapp">
                           <i className="bi bi-whatsapp"></i>
                         </a>
                       </div>
@@ -349,13 +349,13 @@ const Testimonial = () => {
                       </p>
                       <h3>Minta Hadad</h3>
                       <div className="social-links">
-                        <a href="#" className="fb">
+                        <a href="/" className="fb">
                           <i className="bi bi-facebook"></i>
                         </a>
-                        <a href="#" className="insta">
+                        <a href="/" className="insta">
                           <i className="bi bi-instagram"></i>
                         </a>
-                        <a href="#" className="whatsapp">
+                        <a href="/" className="whatsapp">
                           <i className="bi bi-whatsapp"></i>
                         </a>
                       </div>
@@ -375,13 +375,13 @@ const Testimonial = () => {
                       </p>
                       <h3>Sherman Cibrian</h3>
                       <div className="social-links">
-                        <a href="#" className="fb">
+                        <a href="/" className="fb">
                           <i className="bi bi-facebook"></i>
                         </a>
-                        <a href="#" className="insta">
+                        <a href="/" className="insta">
                           <i className="bi bi-instagram"></i>
                         </a>
-                        <a href="#" className="whatsapp">
+                        <a href="/" className="whatsapp">
                           <i className="bi bi-whatsapp"></i>
                         </a>
                       </div>
@@ -401,13 +401,13 @@ const Testimonial = () => {
                       </p>
                       <h3>Adrianne Hagans</h3>
                       <div className="social-links">
-                        <a href="#" className="fb">
+                        <a href="/" className="fb">
                           <i className="bi bi-facebook"></i>
                         </a>
-                        <a href="#" className="insta">
+                        <a href="/" className="insta">
                           <i className="bi bi-instagram"></i>
                         </a>
-                        <a href="#" className="whatsapp">
+                        <a href="/" className="whatsapp">
                           <i className="bi bi-whatsapp"></i>
                         </a>
                       </div>
@@ -421,43 +421,43 @@ const Testimonial = () => {
               <div className="my-auto">
                 <div id="testimonials-slider-pager">
                   <div className="pager-one">
-                    <a href="#" className="pager-item active" data-slide-index="0">
+                    <a href="/" className="pager-item active" data-slide-index="0">
                       <img src={user1} />
                     </a>
-                    <a href="#" className="pager-item" data-slide-index="1">
-                      <img src={user2} alt="Awesome Image" />
+                    <a href="/" className="pager-item" data-slide-index="1">
+                      <img src={user2} alt="Awesome" />
                     </a>
-                    <a href="#" className="pager-item" data-slide-index="2">
-                      <img src={user3} alt="Awesome Image" />
+                    <a href="/" className="pager-item" data-slide-index="2">
+                      <img src={user3} alt="Awesome" />
                     </a>
-                    <a href="#" className="pager-item" data-slide-index="3">
-                      <img src={user4} alt="Awesome Image" />
+                    <a href="/" className="pager-item" data-slide-index="3">
+                      <img src={user4} alt="Awesome" />
                     </a>
-                    <a href="#" className="pager-item" data-slide-index="4">
-                      <img src={user5} alt="Awesome Image" />
+                    <a href="/" className="pager-item" data-slide-index="4">
+                      <img src={user5} alt="Awesome" />
                     </a>
-                    <a href="#" className="pager-item" data-slide-index="5">
-                      <img src={user6} alt="Awesome Image" />
+                    <a href="/" className="pager-item" data-slide-index="5">
+                      <img src={user6} alt="Awesome" />
                     </a>
                   </div>
                   <div className="pager-two">
-                    <a href="#" className="pager-item active" data-slide-index="0">
+                    <a href="/" className="pager-item active" data-slide-index="0">
                       <img src={user1} />
                     </a>
-                    <a href="#" className="pager-item" data-slide-index="1">
-                      <img src={user2} alt="Awesome Image" />
+                    <a href="/" className="pager-item" data-slide-index="1">
+                      <img src={user2} alt="Awesome" />
                     </a>
-                    <a href="#" className="pager-item" data-slide-index="2">
-                      <img src={user3} alt="Awesome Image" />
+                    <a href="/" className="pager-item" data-slide-index="2">
+                      <img src={user3} alt="Awesome" />
                     </a>
-                    <a href="#" className="pager-item" data-slide-index="3">
-                      <img src={user4} alt="Awesome Image" />
+                    <a href="/" className="pager-item" data-slide-index="3">
+                      <img src={user4} alt="Awesome" />
                     </a>
-                    <a href="#" className="pager-item" data-slide-index="4">
-                      <img src={user5} alt="Awesome Image" />
+                    <a href="/" className="pager-item" data-slide-index="4">
+                      <img src={user5} alt="Awesome" />
                     </a>
-                    <a href="#" className="pager-item" data-slide-index="5">
-                      <img src={user6} alt="Awesome Image" />
+                    <a href="/" className="pager-item" data-slide-index="5">
+                      <img src={user6} alt="Awesome" />
                     </a>
                   </div>
                 </div>

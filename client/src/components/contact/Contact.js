@@ -44,22 +44,22 @@ const Contact = () => {
             </div>
             <ul className="sci">
               <li>
-                <a href="#">
+                <a href="/">
                   <i className="fa-brands fa-facebook-f"></i>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="/">
                   <i className="fa-brands fa-instagram"></i>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="/">
                   <i className="fa-brands fa-twitter"></i>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="/">
                   <i className="fa-brands fa-pinterest-p"></i>
                 </a>
               </li>

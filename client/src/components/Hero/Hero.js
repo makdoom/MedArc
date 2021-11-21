@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "./hero.css";
 
 const Hero = () => {
@@ -19,10 +20,10 @@ const Hero = () => {
             </p>
           </div>
           <div className="cta-btn">
-            <button type="button" className="get-cta-btn">
+            <NavLink to="/login" type="button" className="get-cta-btn">
               <span className="name">Get Started</span>
               <i className="bi bi-arrow-right"></i>
-            </button>
+            </NavLink>
           </div>
         </div>
       </div>
