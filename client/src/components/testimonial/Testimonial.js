@@ -8,19 +8,19 @@ const Testimonial = () => {
       <img className="wave-bottom" src="/assets/svg/wave.svg" alt="" />
 
       <div className="testimonials">
-        <section class="one">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-6 bd">
-                <div class="block-title ">
+        <section className="one">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-6 bd">
+                <div className="block-title ">
                   <h2>
                     <span>04. </span>
                     Testimonials
                   </h2>
                 </div>
-                <ul class="slider testimonials-slider">
-                  <li class="slide-item ">
-                    <div class="first">
+                <ul className="slider testimonials-slider">
+                  <li className="slide-item ">
+                    <div className="first">
                       <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit. Sapiente nihil quidem iusto ut odit voluptatum,
@@ -41,8 +41,8 @@ const Testimonial = () => {
                       </div>
                     </div>
                   </li>
-                  <li class="slide-item">
-                    <div class="first">
+                  <li className="slide-item">
+                    <div className="first">
                       <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit. Nam magnam tempore modi magni est velit, vitae
@@ -64,8 +64,8 @@ const Testimonial = () => {
                       </div>
                     </div>
                   </li>
-                  <li class="slide-item">
-                    <div class="first">
+                  <li className="slide-item">
+                    <div className="first">
                       <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit. Quae ab eum quasi fugiat, illo corrupti deleniti
@@ -87,8 +87,8 @@ const Testimonial = () => {
                       </div>
                     </div>
                   </li>
-                  <li class="slide-item">
-                    <div class="first">
+                  <li className="slide-item">
+                    <div className="first">
                       <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit. Perferendis incidunt fugit quaerat non architecto
@@ -110,8 +110,8 @@ const Testimonial = () => {
                       </div>
                     </div>
                   </li>
-                  <li class="slide-item">
-                    <div class="first">
+                  <li className="slide-item">
+                    <div className="first">
                       <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit. Temporibus magni, voluptatem, accusantium laborum
@@ -133,8 +133,8 @@ const Testimonial = () => {
                       </div>
                     </div>
                   </li>
-                  <li class="slide-item">
-                    <div class="first">
+                  <li className="slide-item">
+                    <div className="first">
                       <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit. Itaque magni excepturi sed alias dolores
@@ -159,78 +159,78 @@ const Testimonial = () => {
                 </ul>
               </div>
 
-              <div class="col-lg-6 d-flex justify-content-center bd">
-                <div class="my-auto">
+              <div className="col-lg-6 d-flex justify-content-center bd">
+                <div className="my-auto">
                   <div id="testimonials-slider-pager">
-                    <div class="pager-one">
+                    <div className="pager-one">
                       <a
                         href="/"
-                        class="pager-item active"
+                        className="pager-item active"
                         data-slide-index="0"
                       >
                         <img src="assets/images/user1.jpg" alt="Awesome" />
                       </a>
-                      <a href="/" class="pager-item" data-slide-index="1">
+                      <a href="/" className="pager-item" data-slide-index="1">
                         <img
                           src="assets/images/user2.jpg"
                           alt="Awesome"
                         />
                       </a>
-                      <a href="/" class="pager-item" data-slide-index="2">
+                      <a href="/" className="pager-item" data-slide-index="2">
                         <img
                           src="assets/images/user3.jpg"
                           alt="Awesome"
                         />
                       </a>
-                      <a href="/" class="pager-item" data-slide-index="3">
+                      <a href="/" className="pager-item" data-slide-index="3">
                         <img
                           src="assets/images/user4.jpg"
                           alt="Awesome"
                         />
                       </a>
-                      <a href="/" class="pager-item" data-slide-index="4">
+                      <a href="/" className="pager-item" data-slide-index="4">
                         <img
                           src="assets/images/user5.jpg"
                           alt="Awesome"
                         />
                       </a>
-                      <a href="/" class="pager-item" data-slide-index="5">
+                      <a href="/" className="pager-item" data-slide-index="5">
                         <img
                           src="assets/images/user6.jpg"
                           alt="Awesome"
                         />
                       </a>
                     </div>
-                    <div class="pager-two">
+                    <div className="pager-two">
                       <a
                         href="/"
-                        class="pager-item active"
+                        className="pager-item active"
                         data-slide-index="0"
                       >
                         <img src="assets/images/user1.jpg"  alt="Awesome" />
                       </a>
-                      <a href="/" class="pager-item" data-slide-index="1">
+                      <a href="/" className="pager-item" data-slide-index="1">
                         <img src="assets/images/user2.jpg"  alt="Awesome" />
                       </a>
-                      <a href="/" class="pager-item" data-slide-index="2">
+                      <a href="/" className="pager-item" data-slide-index="2">
                         <img
                           src="assets/images/user3.jpg"
                           alt="Awesome"
                         />
                       </a>
-                      <a href="/" class="pager-item" data-slide-index="3">
+                      <a href="/" className="pager-item" data-slide-index="3">
                         <img
                           src="assets/images/user4.jpg"
                           alt="Awesome"
                         />
                       </a>
-                      <a href="/" class="pager-item" data-slide-index="4">
+                      <a href="/" className="pager-item" data-slide-index="4">
                         <img
                           src="assets/images/user5.jpg"
                           alt="Awesome"
                         />
                       </a>
-                      <a href="/" class="pager-item" data-slide-index="5">
+                      <a href="/" className="pager-item" data-slide-index="5">
                         <img
                           src="assets/images/user6.jpg"
                           alt="Awesome"

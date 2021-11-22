@@ -4,7 +4,9 @@ import "./login.css";
 
 export default function Login() {
   const [userType, setUserType] = useState("Doctor");
+
   const handleUserType = (e) => {
+    e.preventDefault()
     setUserType(e.target.classList.value);
     let marker = document.querySelector(".l-marker");
     marker.style.left = e.target.offsetLeft + "px";
@@ -66,24 +68,22 @@ export default function Login() {
                 </div>
                 <div className="user-type">
                   <div className="l-marker"></div>
-                  <a
-                    href="/"
+                  <button
                     className={`${
                       userType === "Doctor" ? "Doctor active" : "Doctor"
                     }`}
                     onClick={handleUserType}
                   >
                     Doctor
-                  </a>
-                  <a
-                    href="/"
+                  </button>
+                  <button
                     className={`${
                       userType === "Patient" ? "Patient active" : "Patient"
                     }`}
                     onClick={handleUserType}
                   >
                     Patient
-                  </a>
+                  </button>
                 </div>
               </div>
               <div className="form-body">
@@ -99,7 +99,7 @@ export default function Login() {
                       Your Password
                     </label>
 
-                    <a href="/" class="">
+                    <a href="/" className="">
                       Forgot Password ?
                     </a>
                   </div>
@@ -111,11 +111,11 @@ export default function Login() {
                 </div>
               </div>
               <div className="form-footer">
-                <button type="submit" class="submit-btn">
+                <button type="submit" className="submit-btn">
                   Login
                 </button>
-                <button type="button" class="google-btn">
-                  <span class="svg-icon svg-icon-md">
+                <button type="button" className="google-btn">
+                  <span className="svg-icon svg-icon-md">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="20"

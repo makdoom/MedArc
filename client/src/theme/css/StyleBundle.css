@@ -57025,7 +57025,6 @@ code {
 .ui-draggable-handle {
   cursor: move;
   /* fallback if grab cursor is unsupported */
-  cursor: grab;
   cursor: -webkit-grab; }
 
 @media (max-width: 1199.98px) {

@@ -78,24 +78,27 @@
   display: flex;
   border-radius: 8px;
 }
-.form-header .user-type a {
+.form-header .user-type button {
   flex: 0.5;
   text-align: center;
   display: block;
   padding: 12px 24px;
   border-radius: 8px;
+  border: none;
+  outline: none;
+  background: transparent;
   font-size: 1.15rem;
   font-weight: 600;
   color: var(--primary-color);
   z-index: 1;
 }
-.form-header .user-type a.active {
+.form-header .user-type button.active {
   color: #fff;
 }
-.form-header .user-type a.Doctor {
+.form-header .user-type button.Doctor {
   margin-right: 10px;
 }
-.form-header .user-type a.Patient {
+.form-header .user-type button.Patient {
   margin-left: 10px;
 }
 
