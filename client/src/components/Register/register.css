@@ -133,7 +133,8 @@
   outline: none;
   padding: 12px 30px;
   border-radius: 8px;
-  margin-top: 5rem;
+  margin-top: 2rem;
+  overflow: hidden;
 }
 .userFooter__btn > button.next {
   background: var(--primary-color) !important;
@@ -176,7 +177,7 @@
 }
 
 .form-body .form-group {
-  margin-bottom: 1.5rem;
+  margin-top: 2rem;
 }
 .form-body .form-group .input-label {
   font-size: 1.15rem;
