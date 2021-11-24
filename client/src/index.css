@@ -69,6 +69,7 @@ body {
   /* background-color: var(--primary-background); */
   overflow-x: hidden;
   scroll-behavior: smooth;
+  letter-spacing: 0.3px;
 }
 a {
   text-decoration: none;

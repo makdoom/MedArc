@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import "./login.css";
 
@@ -6,7 +7,7 @@ export default function Login() {
   const [userType, setUserType] = useState("Doctor");
 
   const handleUserType = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     setUserType(e.target.classList.value);
     let marker = document.querySelector(".l-marker");
     marker.style.left = e.target.offsetLeft + "px";
@@ -63,7 +64,8 @@ export default function Login() {
                 <div className="header-top">
                   <h3>{userType} Login</h3>
                   <p className="new-acc-sec">
-                    Don't Have an Account ? <a href="/">Create Account</a>
+                    Don't Have an Account ?{" "}
+                    <Link to="/register">Create Account</Link>
                   </p>
                 </div>
                 <div className="user-type">
@@ -141,7 +143,7 @@ export default function Login() {
                       />
                     </svg>
                   </span>
-                 Login with Google
+                  Login with Google
                 </button>
               </div>
             </form>
