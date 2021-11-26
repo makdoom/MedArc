@@ -87,6 +87,7 @@
   border-radius: 40px;
   padding: 20px;
   cursor: pointer;
+  border: 1px solid var(--primary-background);
 }
 .userType__wrapper .user__type.doctor,
 .userType__wrapper .user__type.patient,
@@ -192,6 +193,35 @@
   height: auto;
   padding: 1.5rem 1.5rem;
   font-size: 1.17rem;
+}
+
+.complete__top {
+  margin-bottom: 3rem;
+}
+.complete__top > h2 {
+  font-weight: 600;
+  font-size: 2.1rem;
+  margin-bottom: 0.2rem;
+}
+.complete__top > span {
+  font-size: 1.35rem;
+  color: var(--secondary-text);
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+.complete__infoBox {
+  margin-bottom: 1.5rem;
+}
+.complete__infoBox > h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  margin-bottom: 1rem;
+}
+.complete__infoBox > p {
+  color: var(--gray-dark);
+  font-size: 1.1rem;
+  margin-bottom: 2px !important;
 }
 /* 
 .variable__body .form-footer {

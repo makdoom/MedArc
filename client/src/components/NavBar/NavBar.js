@@ -2,8 +2,6 @@ import React, { useEffect } from "react";
 import "./navBar.css";
 
 const NavBar = () => {
-  
-
   useEffect(() => {
     let marker = document.querySelector(".marker");
     let items = document.querySelectorAll(".nav-menu a");
