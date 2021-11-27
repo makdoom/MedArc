@@ -165,6 +165,11 @@
   overflow: hidden;
   transition: 0.4s ease;
 }
+.contact-form .card-footer .reset {
+  background: var(--primary-background);
+  color: var(--primary-color);
+  transition: 0.5s;
+}
 .contact-form .card-footer .submit {
   color: white;
   background: var(--primary-color);

@@ -78,7 +78,7 @@ const Contact = () => {
                           <input
                             type="text"
                             className="form-control"
-                            placeholder="Enter email"
+                            placeholder="First Name"
                           />
                         </div>
                       </div>
@@ -88,7 +88,7 @@ const Contact = () => {
                           <input
                             type="text"
                             className="form-control"
-                            placeholder="Enter email"
+                            placeholder="Last Name"
                           />
                         </div>
                       </div>
@@ -98,7 +98,7 @@ const Contact = () => {
                           <input
                             type="tel"
                             className="form-control"
-                            placeholder="Enter email"
+                            placeholder="Mobile Number"
                           />
                         </div>
                       </div>
@@ -108,7 +108,7 @@ const Contact = () => {
                           <input
                             type="email"
                             className="form-control"
-                            placeholder="Enter email"
+                            placeholder="Email"
                           />
                         </div>
                       </div>
@@ -119,6 +119,7 @@ const Contact = () => {
                             className="form-control"
                             id="exampleTextarea"
                             rows="3"
+                            placeholder="Message"
                           ></textarea>
                         </div>
                       </div>

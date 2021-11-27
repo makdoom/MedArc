@@ -50,7 +50,7 @@ export default function Login() {
               </svg>
             </div>
             <div className="text-box">
-              <h3 className="logo-text">Welcome to MedArc</h3>
+              <h2 className="logo-text">Welcome to MedArc</h2>
               <p className="text-dark-50">
                 Blockchain Based Online Medical Archieve
               </p>
@@ -91,17 +91,17 @@ export default function Login() {
               <div className="form-body">
                 <div className="form-group">
                   <label className="input-label" htmlFor="email">
-                    Your Email
+                    {userType} Email
                   </label>
                   <input className="form-control" type="email" id="email" />
                 </div>
                 <div className="form-group">
                   <div className="forgot-sec">
                     <label className="input-label" htmlFor="password">
-                      Your Password
+                      Password
                     </label>
 
-                    <a href="/" className="">
+                    <a href="/" className="forgot__password">
                       Forgot Password ?
                     </a>
                   </div>

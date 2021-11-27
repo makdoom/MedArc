@@ -30,16 +30,16 @@
 .left-header .text-box {
   text-align: center;
 }
-.left-header .text-box h3 {
-  font-size: 2.5rem;
-  font-weight: 800;
+.left-header .text-box h2 {
+  font-size: 2.7rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
   letter-spacing: 1px;
 }
 .left-header .text-box p {
   font-size: 1.3rem;
   letter-spacing: 0.5px;
-  margin-top: 1rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .login-right {
@@ -47,10 +47,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 1px solid #000; */
 }
 .login-right .form-container {
-  /* border: 1px solid #000; */
   max-width: 450px;
   width: 100%;
   padding: 20px;
@@ -59,20 +57,20 @@
   margin-bottom: 2.5rem;
 }
 .form-header h3 {
-  font-size: 2rem;
+  font-size: 2.1rem;
   font-weight: 700;
 }
 .form-header p {
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 400;
   color: #b5b5c3 !important;
   letter-spacing: 0.5px;
 }
 .form-header p a {
   color: var(--primary-color);
+  font-weight: 600;
 }
 .form-header .user-type {
-  /* border: 1px solid #000; */
   position: relative;
   background: var(--primary-background);
   display: flex;
@@ -88,12 +86,14 @@
   outline: none;
   background: transparent;
   font-size: 1.15rem;
-  font-weight: 600;
+  font-weight: 400;
+  letter-spacing: 0.5px;
   color: var(--primary-color);
   z-index: 1;
 }
 .form-header .user-type button.active {
   color: #fff;
+  font-weight: 500;
 }
 .form-header .user-type button.Doctor {
   margin-right: 10px;
@@ -109,14 +109,10 @@
   top: 0;
   left: 0;
   background: var(--primary-color);
-  /* color: #fff; */
   transition: 0.5s;
-  /* z-index: 1; */
   border-radius: 8px;
 }
-
 .form-body {
-  /* border: 1px solid #000; */
   margin-top: 1.5rem;
 }
 .form-body .form-group {
@@ -140,7 +136,7 @@
 }
 .form-body .form-group .forgot-sec a {
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--primary-color);
 }
 .form-footer button {
@@ -148,7 +144,7 @@
   border: none;
   border-radius: 8px;
   padding: 0.9rem 2.3rem;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.2rem;
   letter-spacing: 0.5px;
   margin: 0.75rem 0;

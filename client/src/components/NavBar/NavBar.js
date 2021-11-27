@@ -32,72 +32,8 @@ const NavBar = () => {
           <a href="#testimonials">Testimonials</a>
           <a href="#contact">Contact</a>
         </div>
-        {/* <ul className="nav-links">
-          <li className="nav-item">
-            <a href="#" className="nav-link">
-              Home
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="#" className="nav-link">
-              Who We Are
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="#" className="nav-link">
-              What We Do
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="#" className="nav-link">
-              Testimonials
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="#" className="nav-link">
-              Contact
-            </a>
-          </li>
-
-          <div className="marker"></div>
-        </ul> */}
-        {/* <div className="burger" onClick={navSlide}>
-        <div className="line1"></div>
-        <div className="line2"></div>
-        <div className="line3"></div>
-      </div> */}
       </nav>
     </div>
-
-    // <div className="container-fluid">
-    //   <nav>
-    //     <div className="logo">
-    //       <h3>
-    //         Med<span>Arc</span>
-    //       </h3>
-    //     </div>
-    //     <ul className="nav-links">
-    //       <li className="nav-link">
-    //         <a href="#">HOME</a>
-    //       </li>
-    //       <li className="nav-link">
-    //         <a href="#">WHO WE ARE</a>
-    //       </li>
-    //       <li className="nav-link">
-    //         <a href="#">WHAT WE DO</a>
-    //       </li>
-
-    //       <li className="nav-link">
-    //         <a href="#">CONTACT US</a>
-    //       </li>
-    //     </ul>
-    //     <div className="burger" onClick={handleNavbar}>
-    //       <div className="line1"></div>
-    //       <div className="line2"></div>
-    //       <div className="line3"></div>
-    //     </div>
-    //   </nav>
-    // </div>
   );
 };
 

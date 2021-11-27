@@ -21,13 +21,13 @@
 #move-text-container {
   margin: 6rem 0;
   background: var(--primary-color);
-  padding: 15px;
+  padding: 30px;
 }
 .move-text {
   position: relative;
 }
 .move-text .main-head {
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 2px;
