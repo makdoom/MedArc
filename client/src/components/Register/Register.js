@@ -14,6 +14,13 @@ const Register = () => {
     addressDetails: {},
   });
 
+  // HandleSubmit
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setUserScreen("complete");
+    console.log(user);
+  };
+
   return (
     <div className="register__container">
       <div className="register__left">
@@ -548,10 +555,7 @@ const Register = () => {
                     >
                       <i className="bi bi-arrow-left"></i> <span>Previous</span>
                     </button>
-                    <button
-                      className="next"
-                      onClick={() => setUserScreen("complete")}
-                    >
+                    <button className="next" onClick={handleSubmit}>
                       <span>Submit</span> <i className="bi bi-arrow-right"></i>
                     </button>
                   </div>
