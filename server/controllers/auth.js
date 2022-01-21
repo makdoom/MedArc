@@ -1,4 +1,5 @@
 const User = require("../models/User");
+const ErrorResponse = require("../utils/errorResponse");
 
 // Register controller
 exports.register = async (req, res, next) => {
@@ -9,7 +10,8 @@ exports.register = async (req, res, next) => {
     res.status(201).json({ success: true, user });
   } catch (error) {
     console.log(error);
-    res.status(500).json({ success: false, erro: error.message });
+    // res.status(500).json({ success: false, erro: error.message });
+    next(error);
   }
 };
 
@@ -18,29 +20,24 @@ exports.login = async (req, res, next) => {
   const { email, password } = req.body;
 
   // check for email and password
-  if (!email || !password) {
-    res
-      .status(400)
-      .json({ status: false, error: "Please provide all the fields" });
-  }
+  if (!email || !password)
+    return next(new ErrorResponse("Please provide all the fields", 400));
+
   // check for user exist or not
   try {
     const user = await User.findOne({ email }).select("+password");
 
-    if (!user) {
-      res
-        .status(404)
-        .json({ success: false, error: "Invalid email or password" });
-    }
+    if (!user) return next(new ErrorResponse("Invalid email or password", 401));
 
     const isMatch = await user.matchPassword(password);
-    if (!isMatch)
-      res.status(404).json({ success: false, error: "Invalid Password" });
+    if (!isMatch) return next(new ErrorResponse("Invalid password", 401));
+    // res.status(404).json({ success: false, error: "Invalid Password" });
 
     res.status(200).json({ success: true, token: "hdajsfhdkjasfhueyruiyeitu" });
   } catch (error) {
     console.log(error);
-    res.status(500).json({ success: false, error: error.message });
+    // res.status(500).json({ success: false, error: error.message });
+    next(error);
   }
 };
 

@@ -1,6 +1,7 @@
 const express = require("express");
 const morgan = require("morgan");
 const connectDB = require("./config/db");
+const errorHandler = require("./middlewares/error");
 require("dotenv").config({ path: "./config.env" });
 
 const app = express();
@@ -14,6 +15,9 @@ app.use(morgan("dev"));
 // Routes
 app.use("/api/auth", require("./routes/auth"));
 const PORT = process.env.PORT || 5000;
+
+// Error Handler
+app.use(errorHandler);
 
 const server = app.listen(PORT, () =>
   console.log(`Server up and running at ${PORT}`)
