@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
+const bcrypt = require("bcryptjs");
 
-const PatientSchema = new mongoose.Schema({
-  name: {
+const UserSchema = new mongoose.Schema({
+  username: {
     type: String,
     required: [true, "Please provide name"],
   },
@@ -24,7 +25,21 @@ const PatientSchema = new mongoose.Schema({
   resetPasswordExpire: Date,
 });
 
-// Model
-const Patient = mongoose.model("Patients", PatientSchema);
+// hashing
+UserSchema.pre("save", async function (next) {
+  if (!this.isModified("password")) next();
 
-module.exports = Patient;
+  const salt = await bcrypt.genSalt(10);
+  this.password = await bcrypt.hash(this.password, salt);
+  next();
+});
+
+// Password checking
+UserSchema.methods.matchPassword = async function (password) {
+  return await bcrypt.compare(password, this.password);
+};
+
+// Model
+const User = mongoose.model("User", UserSchema);
+
+module.exports = User;
