@@ -6,11 +6,9 @@ exports.register = async (req, res, next) => {
   const { username, email, password } = req.body;
   try {
     const user = await User.create({ username, email, password });
-    console.log(user);
-    res.status(201).json({ success: true, user });
+    sendToken(user, 201, res);
+    // res.status(201).json({ success: true, user });
   } catch (error) {
-    console.log(error);
-    // res.status(500).json({ success: false, erro: error.message });
     next(error);
   }
 };
@@ -30,13 +28,12 @@ exports.login = async (req, res, next) => {
     if (!user) return next(new ErrorResponse("Invalid email or password", 401));
 
     const isMatch = await user.matchPassword(password);
-    if (!isMatch) return next(new ErrorResponse("Invalid password", 401));
-    // res.status(404).json({ success: false, error: "Invalid Password" });
 
-    res.status(200).json({ success: true, token: "hdajsfhdkjasfhueyruiyeitu" });
+    if (!isMatch) return next(new ErrorResponse("Invalid password", 401));
+
+    sendToken(user, 200, res);
+    // res.status(200).json({ success: true, token: "hdajsfhdkjasfhueyruiyeitu" });
   } catch (error) {
-    console.log(error);
-    // res.status(500).json({ success: false, error: error.message });
     next(error);
   }
 };
@@ -50,4 +47,10 @@ exports.forgotPassword = (req, res, next) => {
 exports.resetPassword = (req, res, next) => {
   res.send(`Reset password routes ${req.params.token}`);
   // console.log("reset");
+};
+
+// Assigned token
+const sendToken = (user, statusCode, res) => {
+  const token = user.getSignedToken();
+  res.status(statusCode).json({ success: true, token });
 };
