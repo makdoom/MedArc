@@ -5,6 +5,7 @@ import "./login.css";
 export default function Login() {
   const [userState, setUserState] = useState(true);
   const [userType, setUserType] = useState("Patient");
+  const [forgotPassword, setForgotPassword] = useState(false);
 
   const handleUserType = (e) => {
     e.preventDefault();
@@ -15,50 +16,82 @@ export default function Login() {
   };
 
   return (
-    <div className="">
-      <div className="login-container">
-        <div className="login-left">
-          <div className="left-header">
-            <div className="logo-box">
-              <svg
-                width="161"
-                height="160"
-                viewBox="0 0 161 160"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M160.937 159.02L83.5362 0.156926L-0.000106329 159.894C16.6423 141.463 47.3805 129.345 82.3762 129.843C115.355 130.313 144.235 141.874 160.937 159.02Z"
-                  fill="url(#paint0_linear_190:19)"
-                  fillOpacity="0.82"
-                />
-                <defs>
-                  <linearGradient
-                    id="paint0_linear_190:19"
-                    x1="81.5268"
-                    y1="48.0777"
-                    x2="80.4458"
-                    y2="161.04"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stopColor="#7F4BD2" />
-                    <stop offset="1" stopColor="#1CA7EC" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-            <div className="text-box">
-              <h2 className="logo-text">Welcome to MedArc</h2>
-              <p className="text-dark-50">
-                Blockchain Based Online Medical Archieve
-              </p>
-            </div>
+    <div className="login-container">
+      <div className="login-left">
+        <div className="left-header">
+          <div className="logo-box">
+            <svg
+              width="161"
+              height="160"
+              viewBox="0 0 161 160"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M160.937 159.02L83.5362 0.156926L-0.000106329 159.894C16.6423 141.463 47.3805 129.345 82.3762 129.843C115.355 130.313 144.235 141.874 160.937 159.02Z"
+                fill="url(#paint0_linear_190:19)"
+                fillOpacity="0.82"
+              />
+              <defs>
+                <linearGradient
+                  id="paint0_linear_190:19"
+                  x1="81.5268"
+                  y1="48.0777"
+                  x2="80.4458"
+                  y2="161.04"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stopColor="#7F4BD2" />
+                  <stop offset="1" stopColor="#1CA7EC" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div className="text-box">
+            <h2 className="logo-text">Welcome to MedArc</h2>
+            <p className="text-dark-50">
+              Blockchain Based Online Medical Archieve
+            </p>
           </div>
         </div>
-        <div className="login-right">
-          <div className="form-container">
+      </div>
+      <div className="login-right">
+        <div className="form-container">
+          {forgotPassword ? (
+            <>
+              <div className="forgot-password-container">
+                <div className="form-header">
+                  <div className="header-top">
+                    <h5 onClick={() => setForgotPassword(!forgotPassword)}>
+                      <i className="bi bi-arrow-left"></i> <span>Back</span>
+                    </h5>
+                    <h3>Forgotten Password ?</h3>
+                    <p className="new-acc-sec">
+                      Enter your email to reset your password
+                    </p>
+                  </div>
+                </div>
+                <div className="form-body">
+                  <div className="form-group">
+                    <label className="input-label" htmlFor="email">
+                      {userType} Email
+                    </label>
+                    <input className="form-control" type="email" id="email" />
+                  </div>
+                </div>
+                <div className="form-footer">
+                  <button type="submit" className="submit-btn">
+                    Submit
+                  </button>
+                  <button type="button" className="previous-btn">
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            </>
+          ) : (
             <form>
               <div className="form-header">
                 <div className="header-top">
@@ -168,9 +201,12 @@ export default function Login() {
                     </label>
 
                     {userState && (
-                      <a href="/" className="forgot__password">
+                      <span
+                        className="forgot__password"
+                        onClick={() => setForgotPassword(!forgotPassword)}
+                      >
                         Forgot Password ?
-                      </a>
+                      </span>
                     )}
                   </div>
                   <input
@@ -215,7 +251,7 @@ export default function Login() {
                 </button>
               </div>
             </form>
-          </div>
+          )}
         </div>
       </div>
     </div>
