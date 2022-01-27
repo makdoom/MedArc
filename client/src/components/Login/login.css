@@ -66,9 +66,10 @@
   color: #b5b5c3 !important;
   letter-spacing: 0.5px;
 }
-.form-header p a {
+.form-header p span {
   color: var(--primary-color);
   font-weight: 600;
+  cursor: pointer;
 }
 .form-header .user-type {
   position: relative;
@@ -90,16 +91,11 @@
   letter-spacing: 0.5px;
   color: var(--primary-color);
   z-index: 1;
+  transition: all 0.3s ease;
 }
 .form-header .user-type button.active {
   color: #fff;
   font-weight: 500;
-}
-.form-header .user-type button.Doctor {
-  margin-right: 10px;
-}
-.form-header .user-type button.Patient {
-  margin-left: 10px;
 }
 
 .form-header .user-type .l-marker {
@@ -128,7 +124,7 @@
   background: #f3f6f9;
   border-radius: 6px;
   height: auto;
-  padding: 1.5rem 1.5rem;
+  padding: 1.1rem 1.2rem;
 }
 .form-body .form-group .forgot-sec {
   display: flex;

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 
 import "./login.css";
 
 export default function Login() {
-  const [userType, setUserType] = useState("Doctor");
+  const [userState, setUserState] = useState(true);
+  const [userType, setUserType] = useState("Patient");
 
   const handleUserType = (e) => {
     e.preventDefault();
@@ -62,22 +62,27 @@ export default function Login() {
             <form>
               <div className="form-header">
                 <div className="header-top">
-                  <h3>{userType} Login</h3>
-                  <p className="new-acc-sec">
-                    Don't Have an Account ?{" "}
-                    <Link to="/register">Create Account</Link>
-                  </p>
+                  <h3>
+                    {userType} {userState ? "Login" : "Register"}
+                  </h3>
+                  {!userState ? (
+                    <p className="new-acc-sec">
+                      Already Have an Account ?{" "}
+                      <span onClick={() => setUserState(!userState)}>
+                        Login
+                      </span>
+                    </p>
+                  ) : (
+                    <p className="new-acc-sec">
+                      Don't Have an Account ?{" "}
+                      <span onClick={() => setUserState(!userState)}>
+                        Create Account
+                      </span>
+                    </p>
+                  )}
                 </div>
                 <div className="user-type">
                   <div className="l-marker"></div>
-                  <button
-                    className={`${
-                      userType === "Doctor" ? "Doctor active" : "Doctor"
-                    }`}
-                    onClick={handleUserType}
-                  >
-                    Doctor
-                  </button>
                   <button
                     className={`${
                       userType === "Patient" ? "Patient active" : "Patient"
@@ -86,9 +91,70 @@ export default function Login() {
                   >
                     Patient
                   </button>
+                  <button
+                    className={`${
+                      userType === "Doctor" ? "Doctor active" : "Doctor"
+                    }`}
+                    onClick={handleUserType}
+                  >
+                    Doctor
+                  </button>
                 </div>
               </div>
               <div className="form-body">
+                {!userState && (
+                  <div className="register__container">
+                    {userType === "Patient" && (
+                      <>
+                        <div className="form-group">
+                          <label className="input-label" htmlFor="name">
+                            Patient Full Name
+                          </label>
+                          <input
+                            className="form-control"
+                            type="text"
+                            id="name"
+                          />
+                        </div>
+                        <div className="form-group">
+                          <label className="input-label" htmlFor="mobile">
+                            Patient Mobile
+                          </label>
+                          <input
+                            className="form-control"
+                            type="text"
+                            id="mobile"
+                          />
+                        </div>
+                      </>
+                    )}
+                    {userType === "Doctor" && (
+                      <>
+                        <div className="form-group">
+                          <label className="input-label" htmlFor="email">
+                            Clinic Name
+                          </label>
+                          <input
+                            className="form-control"
+                            type="text"
+                            id="email"
+                          />
+                        </div>
+                        <div className="form-group">
+                          <label className="input-label" htmlFor="npi">
+                            NPI Number
+                          </label>
+                          <input
+                            className="form-control"
+                            type="text"
+                            id="npi"
+                          />
+                        </div>
+                      </>
+                    )}
+                  </div>
+                )}
+
                 <div className="form-group">
                   <label className="input-label" htmlFor="email">
                     {userType} Email
@@ -101,9 +167,11 @@ export default function Login() {
                       Password
                     </label>
 
-                    <a href="/" className="forgot__password">
-                      Forgot Password ?
-                    </a>
+                    {userState && (
+                      <a href="/" className="forgot__password">
+                        Forgot Password ?
+                      </a>
+                    )}
                   </div>
                   <input
                     className="form-control"
@@ -114,7 +182,7 @@ export default function Login() {
               </div>
               <div className="form-footer">
                 <button type="submit" className="submit-btn">
-                  Login
+                  {userState ? "Login" : "Register"}
                 </button>
                 <button type="button" className="google-btn">
                   <span className="svg-icon svg-icon-md">
