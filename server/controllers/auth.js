@@ -1,4 +1,5 @@
 const User = require("../models/User");
+const crypto = require("crypto");
 const ErrorResponse = require("../utils/errorResponse");
 const sendEmail = require("../utils/sendEmail");
 
@@ -85,9 +86,32 @@ exports.forgotPassword = async (req, res, next) => {
 };
 
 // Reset password
-exports.resetPassword = (req, res, next) => {
-  res.send(`Reset password routes ${req.params.token}`);
-  // console.log("reset");
+exports.resetPassword = async (req, res, next) => {
+  const { password } = req.body;
+  const resetPasswordToken = crypto
+    .createHash("sha256")
+    .update(req.params.token)
+    .digest("hex");
+
+  try {
+    const user = await User.findOne({
+      resetPasswordToken,
+      resetPasswordExpire: { $gt: Date.now() },
+    });
+
+    if (!user) return next(new ErrorResponse("Invalid reset token", 400));
+
+    user.password = password;
+    user.resetPasswordToken = undefined;
+    user.resetPasswordExpire = undefined;
+
+    await user.save();
+    res
+      .status(201)
+      .json({ success: true, data: "Password reset successfully" });
+  } catch (error) {
+    next(error);
+  }
 };
 
 // Assigned token
