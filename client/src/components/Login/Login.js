@@ -3,12 +3,22 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import "./login.css";
 import { patientSchema } from "../validation/PatientValidation";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  registerPatient,
+  selectedPatient,
+} from "../../features/patientReducer";
 
 export default function Login() {
   const [userState, setUserState] = useState(true);
   const [userType, setUserType] = useState("Patient");
   const [registerObj, setRegisterObj] = useState({});
   const [forgotPassword, setForgotPassword] = useState(false);
+
+  // getting patient from redux
+  const currentPatient = useSelector(selectedPatient);
+  const dispatch = useDispatch();
+  console.log(currentPatient);
 
   // Floating marker
   const handleUserType = (e) => {
@@ -32,6 +42,7 @@ export default function Login() {
   const submitHandler = (e) => {
     console.log(errors);
     console.log(registerObj);
+    dispatch(registerPatient(registerObj));
   };
 
   return (
@@ -291,15 +302,11 @@ export default function Login() {
                 </div>
               </div>
               <div className="form-footer">
-                <button type="submit" className="submit-btn ">
-                  {userState ? "Login" : "Register"}
-                  <div class="spinner"></div>
-                </button>
                 <button
                   type="submit"
-                  class="btn btn-primary spinner spinner-white spinner-right"
+                  className={`btn btn-primary spinner-white spinner-right spinner`}
                 >
-                  Primary
+                  {userState ? "Login" : "Register"}
                 </button>
                 <button type="button" className="google-btn">
                   <span className="svg-icon svg-icon-md">

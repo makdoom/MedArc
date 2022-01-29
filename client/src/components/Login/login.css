@@ -150,15 +150,9 @@
   background-color: var(--primary-color) !important;
   position: relative;
   overflow: hidden;
+  margin-right: 20px;
 }
 
-/* .form-footer button.submit-btn {
-  margin-right: 10px;
-  background: var(--primary-color);
-  color: #fff;
-  overflow: hidden;
-  position: relative;
-} */
 .form-footer .btn-primary::after {
   content: "";
   position: absolute;
