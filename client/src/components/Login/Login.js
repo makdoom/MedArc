@@ -1,18 +1,37 @@
 import React, { useState } from "react";
-
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
 import "./login.css";
+import { patientSchema } from "../validation/PatientValidation";
 
 export default function Login() {
   const [userState, setUserState] = useState(true);
   const [userType, setUserType] = useState("Patient");
+  const [registerObj, setRegisterObj] = useState({});
   const [forgotPassword, setForgotPassword] = useState(false);
 
+  // Floating marker
   const handleUserType = (e) => {
     e.preventDefault();
     setUserType(e.target.classList.value);
     let marker = document.querySelector(".l-marker");
     marker.style.left = e.target.offsetLeft + "px";
     marker.style.width = e.target.offsetWidth + "px";
+  };
+
+  // Hook form
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(patientSchema),
+  });
+
+  // Submit handler
+  const submitHandler = (e) => {
+    console.log(errors);
+    console.log(registerObj);
   };
 
   return (
@@ -92,7 +111,7 @@ export default function Login() {
               </div>
             </>
           ) : (
-            <form>
+            <form onSubmit={handleSubmit(submitHandler)}>
               <div className="form-header">
                 <div className="header-top">
                   <h3>
@@ -140,37 +159,67 @@ export default function Login() {
                     {userType === "Patient" && (
                       <>
                         <div className="form-group">
-                          <label className="input-label" htmlFor="name">
+                          <label className="input-label" htmlFor="fullName">
                             Patient Full Name
                           </label>
                           <input
-                            className="form-control"
+                            className={`form-control ${
+                              errors.fullName && "is-invalid"
+                            }`}
                             type="text"
-                            id="name"
+                            id="fullName"
+                            name="fullName"
+                            {...register("fullName", { required: true })}
+                            onChange={(e) =>
+                              setRegisterObj({
+                                ...registerObj,
+                                [e.target.name]: e.target.value,
+                              })
+                            }
                           />
+                          <p className="invalid-feedback">
+                            {errors.fullName?.message}
+                          </p>
+                          {/* <div class="invalid-feedback">
+                            Shucks, check the formatting of that and try again.
+                          </div> */}
                         </div>
                         <div className="form-group">
                           <label className="input-label" htmlFor="mobile">
                             Patient Mobile
                           </label>
                           <input
-                            className="form-control"
+                            className={`form-control ${
+                              errors.mobile && "is-invalid"
+                            }`}
                             type="text"
                             id="mobile"
+                            name="mobile"
+                            {...register("mobile", { required: true })}
+                            onChange={(e) =>
+                              setRegisterObj({
+                                ...registerObj,
+                                [e.target.name]: e.target.value,
+                              })
+                            }
                           />
+                          <p className="invalid-feedback">
+                            {errors.mobile?.message}
+                          </p>
                         </div>
                       </>
                     )}
                     {userType === "Doctor" && (
                       <>
                         <div className="form-group">
-                          <label className="input-label" htmlFor="email">
+                          <label className="input-label" htmlFor="clinicName">
                             Clinic Name
                           </label>
                           <input
                             className="form-control"
                             type="text"
-                            id="email"
+                            id="clinicName"
+                            name="clinicName"
                           />
                         </div>
                         <div className="form-group">
@@ -181,6 +230,7 @@ export default function Login() {
                             className="form-control"
                             type="text"
                             id="npi"
+                            name="NPI"
                           />
                         </div>
                       </>
@@ -192,7 +242,20 @@ export default function Login() {
                   <label className="input-label" htmlFor="email">
                     {userType} Email
                   </label>
-                  <input className="form-control" type="email" id="email" />
+                  <input
+                    className={`form-control ${errors.email && "is-invalid"}`}
+                    type="email"
+                    name="email"
+                    id="email"
+                    {...register("email", { required: true })}
+                    onChange={(e) =>
+                      setRegisterObj({
+                        ...registerObj,
+                        [e.target.name]: e.target.value,
+                      })
+                    }
+                  />
+                  <p className="invalid-feedback">{errors.email?.message}</p>
                 </div>
                 <div className="form-group">
                   <div className="forgot-sec">
@@ -210,15 +273,33 @@ export default function Login() {
                     )}
                   </div>
                   <input
-                    className="form-control"
+                    className={`form-control ${
+                      errors.password && "is-invalid"
+                    }`}
                     type="password"
                     id="password"
+                    name="password"
+                    {...register("password", { required: true })}
+                    onChange={(e) =>
+                      setRegisterObj({
+                        ...registerObj,
+                        [e.target.name]: e.target.value,
+                      })
+                    }
                   />
+                  <p className="invalid-feedback">{errors.password?.message}</p>
                 </div>
               </div>
               <div className="form-footer">
-                <button type="submit" className="submit-btn">
+                <button type="submit" className="submit-btn ">
                   {userState ? "Login" : "Register"}
+                  <div class="spinner"></div>
+                </button>
+                <button
+                  type="submit"
+                  class="btn btn-primary spinner spinner-white spinner-right"
+                >
+                  Primary
                 </button>
                 <button type="button" className="google-btn">
                   <span className="svg-icon svg-icon-md">
