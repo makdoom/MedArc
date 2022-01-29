@@ -2,10 +2,11 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://127.0.0.1:5000",
+  "proxy": "http://localhost:5000",
   "dependencies": {
     "@hookform/resolvers": "^2.8.8",
     "@reduxjs/toolkit": "^1.7.1",
+    "axios": "^0.25.0",
     "bootstrap": "^5.1.1",
     "cra-template": "1.1.2",
     "jquery": "^3.6.0",

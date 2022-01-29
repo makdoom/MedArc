@@ -8,6 +8,7 @@ import {
   registerPatient,
   selectedPatient,
 } from "../../features/patientReducer";
+import { api } from "../../api/baseUrl";
 
 export default function Login() {
   const [userState, setUserState] = useState(true);
@@ -16,9 +17,8 @@ export default function Login() {
   const [forgotPassword, setForgotPassword] = useState(false);
 
   // getting patient from redux
-  const currentPatient = useSelector(selectedPatient);
+  // const currentPatient = useSelector(selectedPatient);
   const dispatch = useDispatch();
-  console.log(currentPatient);
 
   // Floating marker
   const handleUserType = (e) => {
@@ -39,9 +39,21 @@ export default function Login() {
   });
 
   // Submit handler
-  const submitHandler = (e) => {
+  const submitHandler = async (e) => {
     console.log(errors);
     console.log(registerObj);
+
+    const patientData = {
+      userType,
+      ...registerObj,
+    };
+
+    try {
+      const { data } = await api.post("/register", patientData);
+      console.log("Response", data);
+    } catch (error) {}
+
+    // dispatching action
     dispatch(registerPatient(registerObj));
   };
 

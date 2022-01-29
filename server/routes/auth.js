@@ -5,7 +5,10 @@ const {
   login,
   forgotPassword,
   resetPassword,
+  testing,
 } = require("../controllers/auth");
+
+router.route("/").get(testing);
 
 // Register route
 router.route("/register").post(register);

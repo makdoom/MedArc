@@ -5,14 +5,18 @@ const sendEmail = require("../utils/sendEmail");
 
 // Register controller
 exports.register = async (req, res, next) => {
-  const { username, email, password } = req.body;
+  console.log(req.body);
+  const { fullName, mobile, email, password } = req.body;
   try {
-    const user = await User.create({ username, email, password });
+    const user = await User.create({ fullName, mobile, email, password });
     sendToken(user, 201, res);
     // res.status(201).json({ success: true, user });
   } catch (error) {
     next(error);
   }
+};
+exports.testing = async (req, res, next) => {
+  res.status(200).json({ status: 200, message: "success" });
 };
 
 // Login Controller

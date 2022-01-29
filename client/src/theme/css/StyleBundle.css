@@ -33897,13 +33897,13 @@ a.text-hover-muted,
 .text-transparent {
   color: transparent; }
 
-.text-stroke {
+/* .text-stroke {
   -webkit-text-stroke-width: 0.35rem;
   -moz-text-stroke-width: 0.35rem;
   text-stroke-width: 0.35rem;
   -webkit-text-stroke-color: #ffffff;
   -moz-text-stroke-color: #ffffff;
-  text-stroke-color: #ffffff; }
+  text-stroke-color: #ffffff; } */
 
 .cursor-pointer {
   cursor: pointer; }
@@ -44580,10 +44580,7 @@ code {
     .dropdown-menu > .dropdown-item > i:before {
       line-height: 0;
       vertical-align: middle; }
-  .dropdown-menu .dropdown-menu:not(.daterangepicker) {
-    /*rtl:raw:
-        left: auto !important;
-        */ }
+ 
   .dropdown-menu.dropdown-menu-anim-up {
     -webkit-animation: animation-dropdown-menu-fade-in .3s ease 1, animation-dropdown-menu-move-up .3s ease-out 1;
     animation: animation-dropdown-menu-fade-in .3s ease 1, animation-dropdown-menu-move-up .3s ease-out 1; }
@@ -45185,11 +45182,6 @@ code {
 .table:not(.table-bordered) thead th, .table:not(.table-bordered) thead td {
   border-top: 0; }
 
-.popover {
-  /*rtl:raw:
-    left: 0 !important;
-    right: auto !important;
-    */ }
   .popover .popover-header {
     font-size: 1rem;
     font-weight: 500;
@@ -45230,32 +45222,6 @@ code {
 .tooltip .tooltip-inner {
   -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15); }
-
-.tooltip.bs-tooltip-left .arrow, .tooltip.bs-tooltip-auto[x-placement^="left"] .arrow,
-.tooltip.bs-tooltip-auto[x-placement^="left"] .arrow {
-  /*rtl:raw:
-        left: auto;
-        right: 0;
-        */ }
-  .tooltip.bs-tooltip-left .arrow:before, .tooltip.bs-tooltip-auto[x-placement^="left"] .arrow:before,
-  .tooltip.bs-tooltip-auto[x-placement^="left"] .arrow:before {
-    /*rtl:raw:
-        border-width: 0.4rem 0 0.4rem 0.4rem;
-        border-left-color: #fff;
-        */ }
-
-.tooltip.bs-tooltip-right .arrow, .tooltip.bs-tooltip-auto[x-placement^="right"] .arrow,
-.tooltip.bs-tooltip-auto[x-placement^="right"] .arrow {
-  /*rtl:raw:
-        right: auto;
-        left: 0;
-        */ }
-  .tooltip.bs-tooltip-right .arrow:before, .tooltip.bs-tooltip-auto[x-placement^="right"] .arrow:before,
-  .tooltip.bs-tooltip-auto[x-placement^="right"] .arrow:before {
-    /*rtl:raw:
-        border-width: 0.4rem 0.4rem 0.4rem 0;
-        border-right-color: #fff;
-        */ }
 
 .tooltip.tooltop-auto-width .tooltip-inner {
   white-space: nowrap;
@@ -53829,20 +53795,20 @@ code {
 .svg.svg-fill-dark-50 {
   fill: #7E8299 !important; }
 
-.svg.svg-fill-light-dark-50 {
-  fill: !important; }
+/* .svg.svg-fill-light-dark-50 {
+  fill: !important; } */
 
 .svg.svg-fill-dark-25 {
   fill: #D1D3E0 !important; }
 
-.svg.svg-fill-light-dark-25 {
-  fill: !important; }
+/* .svg.svg-fill-light-dark-25 {
+  fill: !important; } */
 
 .svg.svg-fill-muted {
   fill: #B5B5C3 !important; }
 
-.svg.svg-fill-light-muted {
-  fill: !important; }
+/* .svg.svg-fill-light-muted {
+  fill: !important; } */
 
 .timeline.timeline-1 {
   position: relative; }
@@ -57567,8 +57533,6 @@ code {
   .fc-unthemed .fc-toolbar .fc-button.fc-button-disabled {
     opacity: 0.7; }
 
-.gmaps {
-  /* important!  bootstrap sets max-width on img to 100% which conflicts with google map canvas*/ }
   .gmaps img {
     max-width: none; }
   .gmaps.gmaps-static > div {
