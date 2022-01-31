@@ -8,20 +8,22 @@ import "./index.css";
 import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 import patientReducer from "./features/patientReducer";
+import authReducer from "./features/authReducer";
 
 const store = configureStore({
   reducer: {
+    auth: authReducer,
     patient: patientReducer,
   },
 });
 
 ReactDOM.render(
-  <React.StrictMode>
+  // <React.StrictMode>
+  <Router>
     <Provider store={store}>
-      <Router>
-        <App />
-      </Router>
+      <App />
     </Provider>
-  </React.StrictMode>,
+  </Router>,
+  // </React.StrictMode>,
   document.getElementById("root")
 );

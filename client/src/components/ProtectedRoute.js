@@ -1,16 +1,25 @@
+import React from "react";
 import { Route, Redirect } from "react-router-dom";
 
-const ProtectedRoute = ({ component: Component, ...rest }) => {
+const ProtectedRoute = ({ auth, component: Component, ...rest }) => {
   return (
+    // <>{isAuthenticated && <Component />}</>
     <Route
       {...rest}
-      render={(props) => {
-        localStorage.getItem("authToken") ? (
-          <Component {...props} />
-        ) : (
-          <Redirect to="/login" />
-        );
-      }}
+      render={
+        (props) => {
+          if (auth) {
+            return <Component {...props} />;
+          } else {
+            <Redirect to="/dashboard" />;
+          }
+        }
+        // localStorage.getItem("authToken") ? (
+        //   <Component />
+        // ) : (
+        //   <Redirect to="/login" />
+        // )
+      }
     />
   );
 };

@@ -8,10 +8,10 @@ import Dashboard from "./components/Dashboard/Dashboard";
 function App() {
   return (
     <Switch>
-      <ProtectedRoute exact path="/dashboard" component={<Dashboard />} />
       <Route exact path="/" component={Main} />
-      <Route exact path="/login" component={Login} />
-      {/* <Route exact path="/register" component={Register} /> */}
+      <Route path="/login" component={Login} />
+      {/* <ProtectedRoute path="/dashboard" component={<Dashboard />} auth={true} /> */}
+      <Route exact path="/dashboard" component={Dashboard} />
     </Switch>
   );
 }

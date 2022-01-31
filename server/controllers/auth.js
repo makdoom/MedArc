@@ -5,12 +5,16 @@ const sendEmail = require("../utils/sendEmail");
 
 // Register controller
 exports.register = async (req, res, next) => {
-  console.log(req.body);
   const { fullName, mobile, email, password } = req.body;
   try {
+    // checking user exists or not
+    const isExists = await User.findOne({ email });
+    if (isExists)
+      return next(new ErrorResponse("This email is already in use", 409));
+
+    // Creating new user
     const user = await User.create({ fullName, mobile, email, password });
     sendToken(user, 201, res);
-    // res.status(201).json({ success: true, user });
   } catch (error) {
     next(error);
   }
@@ -27,8 +31,8 @@ exports.login = async (req, res, next) => {
   if (!email || !password)
     return next(new ErrorResponse("Please provide all the fields", 400));
 
-  // check for user exist or not
   try {
+    // check for user exist or not
     const user = await User.findOne({ email }).select("+password");
 
     if (!user) return next(new ErrorResponse("Invalid email or password", 401));

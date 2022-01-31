@@ -14,5 +14,9 @@ export const patientSchema = yup.object().shape({
     .string()
     .min(4, "Password must be at least 4 chrachters long")
     .max(15, "Password must be at most 15 chrachters")
-    .required("Please provide a valid password"),
+    .required("Please provide a valid password")
+    .matches(
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
+      "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"
+    ),
 });

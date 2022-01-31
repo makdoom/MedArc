@@ -8,16 +8,22 @@ import {
   registerPatient,
   selectedPatient,
 } from "../../features/patientReducer";
-import { api } from "../../api/baseUrl";
+import { patientRegistration } from "../../controllers/registerController";
+import { useHistory } from "react-router-dom";
+import { isAuthenticated } from "../../features/authReducer";
 
 export default function Login() {
-  const [userState, setUserState] = useState(true);
+  const [userState, setUserState] = useState("Login");
   const [userType, setUserType] = useState("Patient");
   const [registerObj, setRegisterObj] = useState({});
   const [forgotPassword, setForgotPassword] = useState(false);
+  const [serverError, setServerError] = useState({});
+  const history = useHistory();
 
   // getting patient from redux
   // const currentPatient = useSelector(selectedPatient);
+  const isUserAuthenticated = useSelector(isAuthenticated);
+  console.log(isUserAuthenticated);
   const dispatch = useDispatch();
 
   // Floating marker
@@ -43,15 +49,30 @@ export default function Login() {
     console.log(errors);
     console.log(registerObj);
 
-    const patientData = {
-      userType,
-      ...registerObj,
-    };
+    // For patient userType
+    if (userType === "Patient") {
+      if (userState === "Register") {
+        // Creating patient data obj
+        const patientData = {
+          userType,
+          ...registerObj,
+        };
 
-    try {
-      const { data } = await api.post("/register", patientData);
-      console.log("Response", data);
-    } catch (error) {}
+        const data = await patientRegistration(patientData);
+        console.log(data);
+
+        // Setting server side errors
+        if (!data.success) return setServerError({ email: data.error });
+
+        // redirect to dashboard
+        history.push("/dashboard");
+      }
+    }
+
+    // For Doctor user type
+    if (userType === "Doctor") {
+      // code goes here
+    }
 
     // dispatching action
     dispatch(registerPatient(registerObj));
@@ -138,21 +159,19 @@ export default function Login() {
               <div className="form-header">
                 <div className="header-top">
                   <h3>
-                    {userType} {userState ? "Login" : "Register"}
+                    {userType} {userState}
                   </h3>
-                  {!userState ? (
+                  {userState === "Login" ? (
                     <p className="new-acc-sec">
-                      Already Have an Account ?{" "}
-                      <span onClick={() => setUserState(!userState)}>
-                        Login
+                      Don't Have an Account ?{" "}
+                      <span onClick={() => setUserState("Register")}>
+                        Create Account
                       </span>
                     </p>
                   ) : (
                     <p className="new-acc-sec">
-                      Don't Have an Account ?{" "}
-                      <span onClick={() => setUserState(!userState)}>
-                        Create Account
-                      </span>
+                      Already Have an Account ?{" "}
+                      <span onClick={() => setUserState("Login")}>Login</span>
                     </p>
                   )}
                 </div>
@@ -177,7 +196,7 @@ export default function Login() {
                 </div>
               </div>
               <div className="form-body">
-                {!userState && (
+                {userState === "Register" && (
                   <div className="register__container">
                     {userType === "Patient" && (
                       <>
@@ -266,7 +285,9 @@ export default function Login() {
                     {userType} Email
                   </label>
                   <input
-                    className={`form-control ${errors.email && "is-invalid"}`}
+                    className={`form-control ${
+                      (errors.email || serverError.email) && "is-invalid"
+                    }`}
                     type="email"
                     name="email"
                     id="email"
@@ -278,7 +299,7 @@ export default function Login() {
                       })
                     }
                   />
-                  <p className="invalid-feedback">{errors.email?.message}</p>
+                  <p className="invalid-feedback">{serverError.email}</p>
                 </div>
                 <div className="form-group">
                   <div className="forgot-sec">
@@ -286,7 +307,7 @@ export default function Login() {
                       Password
                     </label>
 
-                    {userState && (
+                    {userState === "Login" && (
                       <span
                         className="forgot__password"
                         onClick={() => setForgotPassword(!forgotPassword)}
@@ -318,7 +339,7 @@ export default function Login() {
                   type="submit"
                   className={`btn btn-primary spinner-white spinner-right spinner`}
                 >
-                  {userState ? "Login" : "Register"}
+                  {userState}
                 </button>
                 <button type="button" className="google-btn">
                   <span className="svg-icon svg-icon-md">
