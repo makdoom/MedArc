@@ -10,10 +10,11 @@ import {
 } from "../../features/patientReducer";
 import { patientRegistration } from "../../controllers/registerController";
 import { useHistory } from "react-router-dom";
-import { isAuthenticated } from "../../features/authReducer";
+import { authenticatedUser, setAuthUser } from "../../features/authReducer";
 
 export default function Login() {
   const [userState, setUserState] = useState("Login");
+  const [loading, setLoading] = useState(false);
   const [userType, setUserType] = useState("Patient");
   const [registerObj, setRegisterObj] = useState({});
   const [forgotPassword, setForgotPassword] = useState(false);
@@ -22,10 +23,9 @@ export default function Login() {
 
   // getting patient from redux
   // const currentPatient = useSelector(selectedPatient);
-  const isUserAuthenticated = useSelector(isAuthenticated);
-  console.log(isUserAuthenticated);
   const dispatch = useDispatch();
-
+  const userAuth = useSelector(authenticatedUser);
+  console.log(userAuth);
   // Floating marker
   const handleUserType = (e) => {
     e.preventDefault();
@@ -48,6 +48,8 @@ export default function Login() {
   const submitHandler = async (e) => {
     console.log(errors);
     console.log(registerObj);
+    // setloading
+    setLoading(!loading);
 
     // For patient userType
     if (userType === "Patient") {
@@ -59,10 +61,12 @@ export default function Login() {
         };
 
         const data = await patientRegistration(patientData);
-        console.log(data);
 
         // Setting server side errors
         if (!data.success) return setServerError({ email: data.error });
+
+        setLoading(!loading);
+        if (data.success) dispatch(setAuthUser(true));
 
         // redirect to dashboard
         history.push("/dashboard");
@@ -75,7 +79,7 @@ export default function Login() {
     }
 
     // dispatching action
-    dispatch(registerPatient(registerObj));
+    // dispatch(registerPatient(registerObj));
   };
 
   return (
@@ -337,7 +341,9 @@ export default function Login() {
               <div className="form-footer">
                 <button
                   type="submit"
-                  className={`btn btn-primary spinner-white spinner-right spinner`}
+                  className={`btn btn-primary spinner-white spinner-right ${
+                    loading && "spinner"
+                  }`}
                 >
                   {userState}
                 </button>

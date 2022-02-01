@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
-import { Redirect } from "react-router-dom";
-import { isAuthenticated } from "../../features/authReducer";
+import { Redirect, useHistory } from "react-router-dom";
+import { authenticatedUser } from "../../features/authReducer";
 
 const Dashboard = () => {
-  const isAuth = useSelector(isAuthenticated);
-  console.log(isAuth.isAuthenticated);
+  const history = useHistory();
+  const authUser = useSelector(authenticatedUser);
+
+  // useEffect(() => {
+  //   if (localStorage.getItem("authTokken") === null)
+  //     return history.push("/login");
+  // }, [history]);
+
+  console.log(authUser);
   return (
     <div>
-      {isAuth.isAuthenticated ? (
+      {authUser.isAuthenticated ? (
         <h1>Welcome to dashboard</h1>
       ) : (
         <Redirect to="/login" />

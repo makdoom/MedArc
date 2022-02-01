@@ -8,9 +8,19 @@ const authSlice = createSlice({
         localStorage.getItem("authToken") === null ? false : true,
     },
   },
-  reducers: {},
+  reducers: {
+    setAuthUser: (state, action) => {
+      console.log("action", action);
+      state.value.isAuthenticated = action.payload;
+      console.log("auth", state.value.isAuthenticated);
+    },
+  },
 });
 
-export const isAuthenticated = (state) => state.auth.value;
+export const authenticatedUser = (state) => state.auth.value;
 
+// exporting actions
+export const { setAuthUser } = authSlice.actions;
+
+// exporting reducer
 export default authSlice.reducer;
