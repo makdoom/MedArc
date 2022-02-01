@@ -12,7 +12,6 @@ const Login = () => {
   const [userType, setUserType] = useState("Patient");
   const [loading, setLoading] = useState(false);
   const [serverError, setServerError] = useState({});
-  const [forgotPassword, setForgotPassword] = useState(false);
   const [loginObj, setLoginObj] = useState({});
 
   const dispatch = useDispatch();
@@ -177,12 +176,9 @@ const Login = () => {
                   <label className="input-label" htmlFor="password">
                     Password
                   </label>
-                  <span
-                    className="forgot__password"
-                    onClick={() => setForgotPassword(!forgotPassword)}
-                  >
-                    Forgot Password ?
-                  </span>
+                  <Link to="/forgot-password">
+                    <span className="forgot__password">Forgot Password ?</span>
+                  </Link>
                 </div>
                 <input
                   className={`form-control ${
@@ -206,6 +202,7 @@ const Login = () => {
             </div>
             <div className="form-footer">
               <button
+                disabled={loading}
                 type="submit"
                 className={`btn btn-primary spinner-white spinner-right ${
                   loading && "spinner"

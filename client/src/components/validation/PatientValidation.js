@@ -17,8 +17,6 @@ export const patientSchema = {
       .required("Please provide a valid email"),
     password: yup
       .string()
-      .min(4, "Password must be at least 4 character long")
-      .max(15, "Password must be at most 15 character ")
       .required("Please provide a valid password")
       .matches(
         /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
@@ -33,8 +31,6 @@ export const patientSchema = {
       .required("Please provide a valid email"),
     password: yup
       .string()
-      .min(4, "Password must be at least 4 character long")
-      .max(15, "Password must be at most 15 character ")
       .required("Please provide a valid password")
       .matches(
         /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,

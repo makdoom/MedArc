@@ -59,11 +59,14 @@ exports.login = async (req, res, next) => {
 // Forgot password
 exports.forgotPassword = async (req, res, next) => {
   const { email } = req.body;
-
   try {
     const user = await User.findOne({ email });
 
-    if (!user) return next(new ErrorResponse("Email doesn't exist", 404));
+    if (!user)
+      return res.status(401).json({
+        success: false,
+        error: { email: "This Email doesn't exist" },
+      });
 
     const resetToken = user.getResetPasswordToken();
 
@@ -88,7 +91,10 @@ exports.forgotPassword = async (req, res, next) => {
         text: message,
       });
 
-      res.status(200).json({ success: true, data: "Email sent successfully" });
+      res.status(200).json({
+        success: true,
+        message: "Password reset link has been sent to your email",
+      });
     } catch (error) {
       user.resetPasswordToken = undefined;
       user.resetPasswordExpire = undefined;
