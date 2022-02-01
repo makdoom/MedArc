@@ -35,11 +35,19 @@ exports.login = async (req, res, next) => {
     // check for user exist or not
     const user = await User.findOne({ email }).select("+password");
 
-    if (!user) return next(new ErrorResponse("Invalid email or password", 401));
+    if (!user)
+      return res.status(401).json({
+        success: false,
+        error: { email: "You have entered an invalid email" },
+      });
 
     const isMatch = await user.matchPassword(password);
 
-    if (!isMatch) return next(new ErrorResponse("Invalid password", 401));
+    if (!isMatch)
+      return res.status(401).json({
+        success: false,
+        error: { password: "Your password is invalid, please try again" },
+      });
 
     sendToken(user, 200, res);
     // res.status(200).json({ success: true, token: "hdajsfhdkjasfhueyruiyeitu" });

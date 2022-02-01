@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { patientSchema } from "../../validation/PatientValidation";
 import { Link } from "react-router-dom";
+import { patientLogin } from "../../../controllers/loginController";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { useDispatch } from "react-redux";
+import { setAuthUser } from "../../../features/authReducer";
 
 const Login = () => {
   const [userType, setUserType] = useState("Patient");
@@ -10,6 +14,9 @@ const Login = () => {
   const [serverError, setServerError] = useState({});
   const [forgotPassword, setForgotPassword] = useState(false);
   const [loginObj, setLoginObj] = useState({});
+
+  const dispatch = useDispatch();
+  const history = useHistory();
 
   // Floating marker
   const handleUserType = (e) => {
@@ -29,9 +36,39 @@ const Login = () => {
     resolver: yupResolver(patientSchema.login),
   });
 
+  // if localstorage has autToken redirect to dashboard
+  useEffect(() => {
+    if (localStorage.getItem("authToken")) {
+      history.push("/dashboard");
+    }
+  }, [history]);
+
   //Submit handler
-  const submitHandler = () => {
+  const submitHandler = async () => {
     console.log(loginObj);
+    // Set loading to true
+    setLoading(true);
+
+    // creating user object
+    const patientData = {
+      userType,
+      ...loginObj,
+    };
+    console.log(patientData);
+    // API request
+    const data = await patientLogin(patientData);
+
+    // Setting server side errors
+    if (!data.success) {
+      setLoading(false);
+      return setServerError(data.error);
+    }
+
+    if (data.success) dispatch(setAuthUser(true));
+
+    setLoading(false);
+    // redirect to dashboard
+    history.push("/dashboard");
   };
   return (
     <div className="screen-container">
@@ -148,7 +185,9 @@ const Login = () => {
                   </span>
                 </div>
                 <input
-                  className={`form-control ${errors.password && "is-invalid"}`}
+                  className={`form-control ${
+                    (errors.password || serverError.password) && "is-invalid"
+                  }`}
                   type="password"
                   id="password"
                   name="password"
@@ -160,7 +199,9 @@ const Login = () => {
                     })
                   }
                 />
-                <p className="invalid-feedback">{errors.password?.message}</p>
+                <p className="invalid-feedback">
+                  {errors.password?.message || serverError.password}
+                </p>
               </div>
             </div>
             <div className="form-footer">
