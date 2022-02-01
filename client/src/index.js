@@ -18,12 +18,12 @@ const store = configureStore({
 });
 
 ReactDOM.render(
-  // <React.StrictMode>
-  <Router>
+  <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <Router>
+        <App />
+      </Router>
     </Provider>
-  </Router>,
-  // </React.StrictMode>,
+  </React.StrictMode>,
   document.getElementById("root")
 );

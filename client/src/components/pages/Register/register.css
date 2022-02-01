@@ -1,9 +1,9 @@
-.login-container {
+.screen-container {
   width: 100vw;
   height: 100vh;
   display: flex;
 }
-.login-left {
+.screen-left {
   flex: 0.3;
   position: relative;
   background: linear-gradient(
@@ -42,13 +42,13 @@
   font-weight: 500;
 }
 
-.login-right {
+.screen-right {
   flex: 0.7;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.login-right .form-container {
+.screen-right .form-container {
   max-width: 450px;
   width: 100%;
   padding: 20px;
@@ -204,9 +204,9 @@
   margin-left: 1rem;
 }
 /* .form-footer button.google-btn:hover {
-  background: var(--secondary-color);
-  color: #fff;
-} */
+    background: var(--secondary-color);
+    color: #fff;
+  } */
 
 .form-footer button.google-btn svg {
   margin-right: 0.5rem;
