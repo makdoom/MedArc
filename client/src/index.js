@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "./theme/css/PluginBundle.css";
 import "./theme/css/StyleBundle.css";
-// import './theme/css/PluginBundle.css'
 import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
 import "./index.css";

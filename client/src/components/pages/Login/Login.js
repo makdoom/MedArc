@@ -5,8 +5,12 @@ import { patientSchema } from "../../validation/PatientValidation";
 import { Link } from "react-router-dom";
 import { patientLogin } from "../../../controllers/loginController";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import { useDispatch } from "react-redux";
-import { setAuthUser } from "../../../features/authReducer";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  authUser,
+  setAuthUser,
+  setPasswordChanged,
+} from "../../../features/authReducer";
 
 const Login = () => {
   const [userType, setUserType] = useState("Patient");
@@ -16,6 +20,7 @@ const Login = () => {
 
   const dispatch = useDispatch();
   const history = useHistory();
+  const user = useSelector(authUser);
 
   // Floating marker
   const handleUserType = (e) => {
@@ -69,6 +74,12 @@ const Login = () => {
     // redirect to dashboard
     history.push("/dashboard");
   };
+
+  // clearing the password changed message
+  setTimeout(() => {
+    dispatch(setPasswordChanged(""));
+  }, 5000);
+
   return (
     <div className="screen-container">
       <div className="screen-left">
@@ -115,6 +126,11 @@ const Login = () => {
         <div className="form-container">
           <form onSubmit={handleSubmit(submitHandler)}>
             <div className="form-header">
+              {user.passwordChanged && (
+                <div className="alert alert-success" role="alert">
+                  <span>{user.passwordChanged}</span>
+                </div>
+              )}
               <div className="header-top">
                 <h3>{userType} Login</h3>
                 <p className="new-acc-sec">

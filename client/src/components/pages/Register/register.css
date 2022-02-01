@@ -226,3 +226,7 @@
   font-size: 0.98rem !important;
   font-weight: 400;
 }
+
+.forgot-password-container .form-header .alert > span {
+  margin-left: 1rem;
+}

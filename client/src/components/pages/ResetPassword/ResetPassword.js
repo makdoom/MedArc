@@ -1,17 +1,23 @@
 import React, { useState } from "react";
-import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { forgotPasswordSchema } from "../../validation/common";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
-import { forgotPassword } from "../../../controllers/commonController";
+import { useForm } from "react-hook-form";
+import { useHistory, useParams } from "react-router-dom";
+import { resetPasswordSchema } from "../../validation/common";
+import { resetPassword } from "../../../controllers/commonController";
+import { useDispatch } from "react-redux";
+import { setPasswordChanged } from "../../../features/authReducer";
 
-const ForgotPassword = () => {
-  const [serverError, setServerError] = useState({});
-  const [successMsg, setSuccessMsg] = useState("");
-  const [email, setEmail] = useState("");
+const ResetPassword = () => {
+  const [serverError, setServerError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [newCred, setNewCred] = useState({
+    newPassword: "",
+    confirmPassword: "",
+  });
 
   const history = useHistory();
+  const dispatch = useDispatch();
+  const { resetToken } = useParams();
 
   // Hook form
   const {
@@ -19,34 +25,31 @@ const ForgotPassword = () => {
     handleSubmit,
     formState: { errors },
   } = useForm({
-    resolver: yupResolver(forgotPasswordSchema),
+    resolver: yupResolver(resetPasswordSchema),
   });
 
   const submitHandler = async () => {
-    // Set loading to true
-    setLoading(true);
+    setTimeout(() => {
+      setServerError("");
+    }, 5000);
 
-    // clearing succes message
-    // setTimeout(() => {
-    //   setSuccessMsg("");
-    //   setServerError({});
-    // }, 5000);
-
-    // API request
-    const data = await forgotPassword(email);
+    const data = await resetPassword(newCred.newPassword, resetToken);
 
     // Setting server side errors
     if (!data.success) {
       setLoading(false);
-      return setServerError(data.error);
+      setNewCred({ newPassword: "", confirmPassword: "" });
+      return setServerError(data.message);
     }
 
-    if (data.success) {
-      setLoading(false);
-      return setSuccessMsg(data.message);
-    }
+    dispatch(
+      setPasswordChanged(
+        "Your password has been changed successfully, Please login to continue"
+      )
+    );
 
-    setLoading(false);
+    // redirect to dashboard
+    history.push("/login");
   };
 
   return (
@@ -97,37 +100,71 @@ const ForgotPassword = () => {
             <div className="form-body">
               <div className="forgot-password-container">
                 <div className="form-header">
-                  {successMsg && (
-                    <div className="alert alert-success" role="alert">
-                      <i className="bi bi-check2-circle"></i>
-                      <span>{successMsg}</span>
+                  {serverError && (
+                    <div className="alert alert-danger" role="alert">
+                      <i className="flaticon2-warning"></i>
+                      <span>{serverError}</span>
                     </div>
                   )}
                   <div className="header-top">
-                    <h3>Forgotten Password ?</h3>
+                    <h3>Create New Password</h3>
                     <p className="new-acc-sec">
-                      Enter your email to reset your password
+                      Your new password must be different from previous used
+                      passwords
                     </p>
                   </div>
                 </div>
                 <div className="form-body">
                   <div className="form-group">
-                    <label className="input-label" htmlFor="email">
-                      Enter Your Email
-                    </label>
+                    <div className="forgot-sec">
+                      <label className="input-label" htmlFor="newPassword">
+                        New Password
+                      </label>
+                    </div>
                     <input
                       className={`form-control ${
-                        (errors.email || serverError.email) && "is-invalid"
+                        errors.newPassword && "is-invalid"
                       }`}
-                      type="email"
-                      name="email"
-                      id="email"
-                      value={email}
-                      {...register("email", { required: true })}
-                      onChange={(e) => setEmail(e.target.value)}
+                      type="password"
+                      id="newPassword"
+                      value={newCred.newPassword}
+                      name="newPassword"
+                      {...register("newPassword", { required: true })}
+                      onChange={(e) =>
+                        setNewCred({
+                          ...newCred,
+                          newPassword: e.target.value,
+                        })
+                      }
                     />
                     <p className="invalid-feedback">
-                      {errors.email?.message || serverError.email}
+                      {errors.newPassword?.message}
+                    </p>
+                  </div>
+                  <div className="form-group">
+                    <div className="forgot-sec">
+                      <label className="input-label" htmlFor="confirmPassword">
+                        Confirm Password
+                      </label>
+                    </div>
+                    <input
+                      className={`form-control ${
+                        errors.confirmPassword && "is-invalid"
+                      }`}
+                      type="password"
+                      id="confirmPassword"
+                      name="confirmPassword"
+                      value={newCred.confirmPassword}
+                      {...register("confirmPassword", { required: true })}
+                      onChange={(e) =>
+                        setNewCred({
+                          ...newCred,
+                          confirmPassword: e.target.value,
+                        })
+                      }
+                    />
+                    <p className="invalid-feedback">
+                      {errors.confirmPassword?.message}
                     </p>
                   </div>
                 </div>
@@ -158,4 +195,4 @@ const ForgotPassword = () => {
   );
 };
 
-export default ForgotPassword;
+export default ResetPassword;

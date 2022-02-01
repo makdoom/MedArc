@@ -90,9 +90,19 @@ body.bg-fixed {
     font-size: 3rem !important;
   }
 } */
+
 .alert.alert-success {
   color: #155724 !important;
   background-color: #d4edda !important;
   border-color: #c3e6cb !important;
+  margin-bottom: 1.3rem;
+}
+
+.alert.alert-danger {
+  display: flex !important;
+  align-items: center !important;
+  color: #f64e60 !important;
+  background-color: #ffe2e5 !important;
+  border-color: #f5c6cb !important;
   margin-bottom: 1.3rem;
 }

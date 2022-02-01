@@ -74,7 +74,7 @@ exports.forgotPassword = async (req, res, next) => {
     await user.save();
 
     // creating url
-    const resetURL = `http://localhost:3000/password-reset/${resetToken}`;
+    const resetURL = `http://localhost:3000/reset-password/${resetToken}`;
 
     // message
     const message = `
@@ -121,7 +121,11 @@ exports.resetPassword = async (req, res, next) => {
       resetPasswordExpire: { $gt: Date.now() },
     });
 
-    if (!user) return next(new ErrorResponse("Invalid reset token", 400));
+    if (!user)
+      return res.status(400).json({
+        success: false,
+        message: "Invalid reset token please try again later",
+      });
 
     user.password = password;
     user.resetPasswordToken = undefined;
@@ -130,7 +134,7 @@ exports.resetPassword = async (req, res, next) => {
     await user.save();
     res
       .status(201)
-      .json({ success: true, data: "Password reset successfully" });
+      .json({ success: true, message: "Password reset successfully" });
   } catch (error) {
     next(error);
   }
