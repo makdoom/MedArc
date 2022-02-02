@@ -43,60 +43,65 @@ exports.register = async (req, res, next) => {
   } catch (error) {
     next(error);
   }
-
-  // For patient registration
-  // if (userType === "Patient") {
-  //   const { fullName, mobile, email, password } = req.body;
-  //   try {
-  //     // checking user exists or not
-  //     const isExists = await User.findOne({ email });
-  //     if (isExists)
-  //       return next(new ErrorResponse("This email is already in use", 409));
-
-  //     // Creating new user
-  //     const user = await User.create({ fullName, mobile, email, password });
-  //     sendToken(user, 201, res);
-  //   } catch (error) {
-  //     next(error);
-  //   }
-  // }
-
-  // // For Doctor registration
-  // if (userType === "Doctor") {
-  // }
 };
 
 // Login Controller
 exports.login = async (req, res, next) => {
-  const { email, password } = req.body;
+  const { userType, email, password } = req.body;
 
-  // check for email and password
+  // Checking for empty field
   if (!email || !password)
     return next(new ErrorResponse("Please provide all the fields", 400));
 
   try {
-    // check for user exist or not
-    const user = await User.findOne({ email }).select("+password");
+    if (userType === "Patient") {
+      // check for user exist or not
+      const user = await Patient.findOne({ email }).select("+password");
 
-    if (!user)
-      return res.status(401).json({
-        success: false,
-        error: { email: "You have entered an invalid email" },
-      });
+      if (!user)
+        return res.status(401).json({
+          success: false,
+          error: { email: "You have entered an invalid email" },
+        });
 
-    const isMatch = await user.matchPassword(password);
+      const isMatch = await user.matchPassword(password);
 
-    if (!isMatch)
-      return res.status(401).json({
-        success: false,
-        error: { password: "Your password is invalid, please try again" },
-      });
+      if (!isMatch)
+        return res.status(401).json({
+          success: false,
+          error: { password: "Your password is invalid, please try again" },
+        });
 
-    sendToken(user, 200, res);
-    // res.status(200).json({ success: true, token: "hdajsfhdkjasfhueyruiyeitu" });
+      sendToken(user, 200, res);
+    } else {
+      // check for user exist or not
+      const user = await Doctor.findOne({ email }).select("+password");
+
+      if (!user)
+        return res.status(401).json({
+          success: false,
+          error: { email: "You have entered an invalid email" },
+        });
+
+      const isMatch = await user.matchPassword(password);
+
+      if (!isMatch)
+        return res.status(401).json({
+          success: false,
+          error: { password: "Your password is invalid, please try again" },
+        });
+
+      sendToken(user, 200, res);
+    }
   } catch (error) {
     next(error);
   }
+
+  // check for email and password
+
+  try {
+    // res.status(200).json({ success: true, token: "hdajsfhdkjasfhueyruiyeitu" });
+  } catch (error) {}
 };
 
 // Forgot password
