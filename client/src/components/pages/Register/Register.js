@@ -3,16 +3,17 @@ import "./register.css";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { patientSchema } from "../../validation/PatientValidation";
-import { patientRegistration } from "../../../controllers/registerController";
+import { userRegistration } from "../../../controllers/registerController";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { setAuthUser } from "../../../features/authReducer";
 import { Link } from "react-router-dom";
+import { doctoSchema } from "../../validation/DoctorValidation";
 
 const Register = () => {
   const [userType, setUserType] = useState("Patient");
-  const [registerObj, setRegisterObj] = useState({});
   const [loading, setLoading] = useState(false);
+  const [registerObj, setRegisterObj] = useState({});
   const [serverError, setServerError] = useState({});
 
   const dispatch = useDispatch();
@@ -21,6 +22,7 @@ const Register = () => {
   // Floating marker
   const handleUserType = (e) => {
     e.preventDefault();
+    setRegisterObj({});
     setUserType(e.target.classList.value);
     let marker = document.querySelector(".l-marker");
     marker.style.left = e.target.offsetLeft + "px";
@@ -33,7 +35,9 @@ const Register = () => {
     handleSubmit,
     formState: { errors },
   } = useForm({
-    resolver: yupResolver(patientSchema.register),
+    resolver: yupResolver(
+      userType === "Patient" ? patientSchema.register : doctoSchema.register
+    ),
   });
 
   //   Submit handler
@@ -42,18 +46,18 @@ const Register = () => {
     setLoading(true);
 
     // creating user object
-    const patientData = {
+    const userData = {
       userType,
       ...registerObj,
     };
 
     // API request
-    const data = await patientRegistration(patientData);
+    const response = await userRegistration(userData);
 
     // Setting server side errors
-    if (!data.success) return setServerError({ email: data.error });
+    if (!response.success) return setServerError({ email: response.error });
 
-    if (data.success) dispatch(setAuthUser(true));
+    if (response.success) dispatch(setAuthUser(true));
 
     setLoading(false);
     // redirect to dashboard
@@ -198,22 +202,46 @@ const Register = () => {
                         Clinic Name
                       </label>
                       <input
-                        className="form-control"
+                        className={`form-control ${
+                          errors.clinicName && "is-invalid"
+                        }`}
                         type="text"
                         id="clinicName"
                         name="clinicName"
+                        {...register("clinicName", { required: true })}
+                        onChange={(e) =>
+                          setRegisterObj({
+                            ...registerObj,
+                            [e.target.name]: e.target.value,
+                          })
+                        }
                       />
+                      <p className="invalid-feedback">
+                        {errors.clinicName?.message}
+                      </p>
                     </div>
                     <div className="form-group">
                       <label className="input-label" htmlFor="npi">
                         NPI Number
                       </label>
                       <input
-                        className="form-control"
+                        className={`form-control ${
+                          errors.npiNumber && "is-invalid"
+                        }`}
                         type="text"
                         id="npi"
-                        name="NPI"
+                        name="npiNumber"
+                        {...register("npiNumber", { required: true })}
+                        onChange={(e) =>
+                          setRegisterObj({
+                            ...registerObj,
+                            [e.target.name]: e.target.value,
+                          })
+                        }
                       />
+                      <p className="invalid-feedback">
+                        {errors.npiNumber?.message}
+                      </p>
                     </div>
                   </>
                 )}

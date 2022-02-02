@@ -1,8 +1,8 @@
 import { api } from "../api/baseUrl";
 
-export const patientRegistration = async (patientData) => {
+export const userRegistration = async (userData) => {
   try {
-    const { data } = await api.post("/register", patientData);
+    const { data } = await api.post("/register", userData);
 
     // storing in localstorage
     localStorage.setItem("authToken", data.token);

@@ -1,26 +1,69 @@
-const User = require("../models/User");
+const User = require("../models/PatientSchema");
+const Doctor = require("../models/DoctorSchema");
+const Patient = require("../models/PatientSchema");
 const crypto = require("crypto");
 const ErrorResponse = require("../utils/errorResponse");
 const sendEmail = require("../utils/sendEmail");
 
 // Register controller
 exports.register = async (req, res, next) => {
-  const { fullName, mobile, email, password } = req.body;
-  try {
-    // checking user exists or not
-    const isExists = await User.findOne({ email });
-    if (isExists)
-      return next(new ErrorResponse("This email is already in use", 409));
+  const { userType } = req.body;
 
-    // Creating new user
-    const user = await User.create({ fullName, mobile, email, password });
-    sendToken(user, 201, res);
+  try {
+    if (userType === "Patient") {
+      // for patient user
+      const { fullName, mobile, email, password } = req.body;
+
+      // checking patient already exist or not
+      const isExists = await Patient.findOne({ email });
+      if (isExists)
+        return next(new ErrorResponse("This email is already in use", 409));
+
+      // Creating new user
+      const user = await Patient.create({ fullName, mobile, email, password });
+      sendToken(user, 201, res);
+    } else {
+      // For doctor user
+      const { clinicName, npiNumber, email, password } = req.body;
+
+      // checking if doctor exist
+      const isExists = await Doctor.findOne({ email });
+      if (isExists)
+        return next(new ErrorResponse("This email is already in use", 409));
+
+      // Creating new doctor user
+      const user = await Doctor.create({
+        clinicName,
+        npiNumber,
+        email,
+        password,
+      });
+      sendToken(user, 201, res);
+    }
   } catch (error) {
     next(error);
   }
-};
-exports.testing = async (req, res, next) => {
-  res.status(200).json({ status: 200, message: "success" });
+
+  // For patient registration
+  // if (userType === "Patient") {
+  //   const { fullName, mobile, email, password } = req.body;
+  //   try {
+  //     // checking user exists or not
+  //     const isExists = await User.findOne({ email });
+  //     if (isExists)
+  //       return next(new ErrorResponse("This email is already in use", 409));
+
+  //     // Creating new user
+  //     const user = await User.create({ fullName, mobile, email, password });
+  //     sendToken(user, 201, res);
+  //   } catch (error) {
+  //     next(error);
+  //   }
+  // }
+
+  // // For Doctor registration
+  // if (userType === "Doctor") {
+  // }
 };
 
 // Login Controller

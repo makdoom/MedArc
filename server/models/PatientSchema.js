@@ -3,7 +3,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const crypto = require("crypto");
 
-const UserSchema = new mongoose.Schema({
+const PatientSchema = new mongoose.Schema({
   fullName: {
     type: String,
     required: [true, "Please provide full name"],
@@ -24,7 +24,7 @@ const UserSchema = new mongoose.Schema({
   password: {
     type: String,
     required: [true, "Please provide a password"],
-    minlength: 6,
+    minlength: 8,
     select: false,
   },
   resetPasswordToken: String,
@@ -32,7 +32,7 @@ const UserSchema = new mongoose.Schema({
 });
 
 // hashing
-UserSchema.pre("save", async function (next) {
+PatientSchema.pre("save", async function (next) {
   if (!this.isModified("password")) next();
 
   const salt = await bcrypt.genSalt(10);
@@ -41,19 +41,19 @@ UserSchema.pre("save", async function (next) {
 });
 
 // Password checking
-UserSchema.methods.matchPassword = async function (password) {
+PatientSchema.methods.matchPassword = async function (password) {
   return await bcrypt.compare(password, this.password);
 };
 
 // Assigned JWT
-UserSchema.methods.getSignedToken = function () {
+PatientSchema.methods.getSignedToken = function () {
   return jwt.sign({ id: this._id }, process.env.JWT_SECRET_KEY, {
     expiresIn: process.env.JWT_EXPIRE,
   });
 };
 
 // Reset Token
-UserSchema.methods.getResetPasswordToken = function () {
+PatientSchema.methods.getResetPasswordToken = function () {
   const resetToken = crypto.randomBytes(20).toString("hex");
 
   this.resetPasswordToken = crypto
@@ -66,6 +66,6 @@ UserSchema.methods.getResetPasswordToken = function () {
 };
 
 // Model
-const User = mongoose.model("User", UserSchema);
+const Patient = mongoose.model("patient", PatientSchema);
 
-module.exports = User;
+module.exports = Patient;
