@@ -15,7 +15,8 @@ exports.register = async (req, res, next) => {
       const { fullName, mobile, email, password } = req.body;
 
       // checking patient already exist or not
-      const isExists = await Patient.findOne({ email });
+      const isExists =
+        (await Patient.findOne({ email })) || (await Doctor.findOne({ email }));
       if (isExists)
         return next(new ErrorResponse("This email is already in use", 409));
 
@@ -106,9 +107,15 @@ exports.login = async (req, res, next) => {
 
 // Forgot password
 exports.forgotPassword = async (req, res, next) => {
-  const { email } = req.body;
+  const { userType, email } = req.body;
+  console.log(userType, email);
   try {
-    const user = await User.findOne({ email });
+    let user;
+    if (userType === "Patient") {
+      user = await Patient.findOne({ email });
+    } else {
+      user = await Doctor.findOne({ email });
+    }
 
     if (!user)
       return res.status(401).json({

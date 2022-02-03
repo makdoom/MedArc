@@ -1,9 +1,9 @@
 import { api } from "../api/baseUrl";
 
 // Forgot password
-export const forgotPassword = async (email) => {
+export const forgotPassword = async (userData) => {
   try {
-    const { data } = await api.post("/forgot-password", { email });
+    const { data } = await api.post("/forgot-password", userData);
     // console.log("Forgot password", data);
     return data;
   } catch (error) {

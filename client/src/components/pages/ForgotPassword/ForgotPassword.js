@@ -6,12 +6,22 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { forgotPassword } from "../../../controllers/commonController";
 
 const ForgotPassword = () => {
+  const [userType, setUserType] = useState("Patient");
   const [serverError, setServerError] = useState({});
   const [successMsg, setSuccessMsg] = useState("");
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
 
   const history = useHistory();
+
+  // Floating marker
+  const handleUserType = (e) => {
+    e.preventDefault();
+    setUserType(e.target.classList.value);
+    let marker = document.querySelector(".l-marker");
+    marker.style.left = e.target.offsetLeft + "px";
+    marker.style.width = e.target.offsetWidth + "px";
+  };
 
   // Hook form
   const {
@@ -27,13 +37,14 @@ const ForgotPassword = () => {
     setLoading(true);
 
     // clearing succes message
-    // setTimeout(() => {
-    //   setSuccessMsg("");
-    //   setServerError({});
-    // }, 5000);
+    setTimeout(() => {
+      setSuccessMsg("");
+      setServerError({});
+    }, 5000);
 
+    console.log({ userType, email });
     // API request
-    const data = await forgotPassword(email);
+    const data = await forgotPassword({ userType, email });
 
     // Setting server side errors
     if (!data.success) {
@@ -109,11 +120,30 @@ const ForgotPassword = () => {
                       Enter your email to reset your password
                     </p>
                   </div>
+                  <div className="user-type">
+                    <div className="l-marker"></div>
+                    <button
+                      className={`${
+                        userType === "Patient" ? "Patient active" : "Patient"
+                      }`}
+                      onClick={handleUserType}
+                    >
+                      Patient
+                    </button>
+                    <button
+                      className={`${
+                        userType === "Doctor" ? "Doctor active" : "Doctor"
+                      }`}
+                      onClick={handleUserType}
+                    >
+                      Doctor
+                    </button>
+                  </div>
                 </div>
-                <div className="form-body">
+                <div className="form-body mt-10">
                   <div className="form-group">
                     <label className="input-label" htmlFor="email">
-                      Enter Your Email
+                      Enter {userType} Email
                     </label>
                     <input
                       className={`form-control ${
