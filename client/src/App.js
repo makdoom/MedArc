@@ -5,6 +5,7 @@ import Register from "./components/pages/Register/Register";
 import Login from "./components/pages/Login/Login";
 import ForgotPassword from "./components/pages/ForgotPassword/ForgotPassword";
 import ResetPassword from "./components/pages/ResetPassword/ResetPassword";
+import Profile from "./Profile/Profile";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Route path="/forgot-password" component={ForgotPassword} />
       <Route path="/reset-password/:resetToken" component={ResetPassword} />
       <Route exact path="/dashboard" component={Dashboard} />
+      <Route exact path="/dashboard/profile" component={Profile} />
       <Redirect from="*" to="/" />
     </Switch>
   );

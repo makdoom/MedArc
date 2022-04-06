@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { patientSchema } from "../../validation/PatientValidation";
 import { Link } from "react-router-dom";
-import { patientLogin } from "../../../controllers/loginController";
+// import { patientLogin } from "../../../controllers/loginController";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -11,6 +11,7 @@ import {
   setAuthUser,
   setPasswordChanged,
 } from "../../../features/authReducer";
+import { patientLogin } from "../../../features/patientReducer";
 
 const Login = () => {
   const [userType, setUserType] = useState("Patient");
@@ -49,7 +50,6 @@ const Login = () => {
 
   //Submit handler
   const submitHandler = async () => {
-    console.log(loginObj);
     // Set loading to true
     setLoading(true);
 
@@ -58,9 +58,8 @@ const Login = () => {
       userType,
       ...loginObj,
     };
-    console.log(patientData);
-    // API request
-    const data = await patientLogin(patientData);
+
+    const data = await dispatch(patientLogin(patientData));
 
     // Setting server side errors
     if (!data.success) {
@@ -74,11 +73,6 @@ const Login = () => {
     // redirect to dashboard
     history.push("/dashboard");
   };
-
-  // clearing the password changed message
-  setTimeout(() => {
-    dispatch(setPasswordChanged(""));
-  }, 5000);
 
   return (
     <div className="screen-container">

@@ -4,6 +4,7 @@ const Patient = require("../models/PatientSchema");
 const crypto = require("crypto");
 const ErrorResponse = require("../utils/errorResponse");
 const sendEmail = require("../utils/sendEmail");
+const Records = require("../models/RecordSchema");
 
 // Register controller
 exports.register = async (req, res, next) => {

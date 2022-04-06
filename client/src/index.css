@@ -106,3 +106,7 @@ body.bg-fixed {
   border-color: #f5c6cb !important;
   margin-bottom: 1.3rem;
 }
+
+textarea {
+  resize: none;
+}

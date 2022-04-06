@@ -6,6 +6,7 @@ export const patientLogin = async (patientData) => {
 
     // storing in localstorage
     localStorage.setItem("authToken", data.token);
+
     console.log("Logindata", data);
     return data;
   } catch (error) {
